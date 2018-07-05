@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78EFD9119368FE58EFB74F65 /* Pods_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D23AE9250A27589F6DCA2D9 /* Pods_Shop.framework */; };
 		DBB5EA7B20EABEBC004A8D6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB5EA7A20EABEBC004A8D6B /* AppDelegate.swift */; };
 		DBB5EA8220EABEBD004A8D6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB5EA8120EABEBD004A8D6B /* Assets.xcassets */; };
 		DBB5EA8520EABEBD004A8D6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB5EA8320EABEBD004A8D6B /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D23AE9250A27589F6DCA2D9 /* Pods_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61B9E90C9125F7C74D00C6E /* Pods-Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shop/Pods-Shop.debug.xcconfig"; sourceTree = "<group>"; };
 		C87AA9400B470487517FD3FA /* Pods-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shop/Pods-Shop.release.xcconfig"; sourceTree = "<group>"; };
 		DBB5EA7720EABEBC004A8D6B /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78EFD9119368FE58EFB74F65 /* Pods_Shop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +186,7 @@
 		DD9AEC3E88466B6CAB823EBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D23AE9250A27589F6DCA2D9 /* Pods_Shop.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,6 +203,7 @@
 				DBB5EA7420EABEBC004A8D6B /* Frameworks */,
 				DBB5EA7520EABEBC004A8D6B /* Resources */,
 				DBB5EAAE20EAC296004A8D6B /* ShellScript */,
+				E55975252B0666677B5ED81C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,6 +350,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		E55975252B0666677B5ED81C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shop/Pods-Shop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shop/Pods-Shop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
