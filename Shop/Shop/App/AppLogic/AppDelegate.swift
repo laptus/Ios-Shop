@@ -12,11 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var requestFactory = RequestFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let auth = requestFactory.makeAuthRequestFactory()
+        auth.login(username: "Somebody", password: "mypassword", completionHandler: {response in
+            switch response.result {
+            case .success(let login):
+                print(login)
+            case .failure(let error):
+                print(error)
+            }
+        })
         return true
     }
 
