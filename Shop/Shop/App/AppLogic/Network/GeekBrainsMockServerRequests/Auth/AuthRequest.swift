@@ -19,7 +19,7 @@ class Auth: AbstractRequestFactory {
 
 extension Auth: AuthRequestFactory {
     func login(username: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
-        let requestModel = Login(baseURL: baseUrl, login: username, password: password)
+        let requestModel = Login(baseURL: baseUrl, login: username, password: password)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     
