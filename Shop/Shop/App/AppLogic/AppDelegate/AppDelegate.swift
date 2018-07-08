@@ -12,8 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var requestFactory = RequestFactory()
-
+    var requestFactory: IServerRequestFactory = GeekBrainsRequestFactory()
+    
+//    override init() {
+//        requestFactory = AbstractServerRequestFactory.returnVaporRequestFactory()
+//        super.init()
+//    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let auth = requestFactory.makeAuthRequestFactory()

@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-class RequestFactory {
+class GeekBrainsRequestFactory: IServerRequestFactory {
     func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
     }
@@ -20,5 +20,10 @@ class RequestFactory {
     func makeAuthRequestFactory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+    }
+    
+    func makePersonalDataRequestFactory() -> PersonalDataRequestFactory {
+        let errorParser = makeErrorParser()
+        return PersonalDataRequest(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
 }

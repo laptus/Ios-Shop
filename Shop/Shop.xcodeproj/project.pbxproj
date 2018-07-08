@@ -10,7 +10,18 @@
 		78EFD9119368FE58EFB74F65 /* Pods_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D23AE9250A27589F6DCA2D9 /* Pods_Shop.framework */; };
 		DB4BFAAA20F13F9700298E68 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAA920F13F9700298E68 /* AuthRequestFactory.swift */; };
 		DB4BFAAC20F1420600298E68 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAAB20F1420600298E68 /* AuthRequest.swift */; };
-		DB4BFAAF20F1482200298E68 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAAE20F1482200298E68 /* RequestFactory.swift */; };
+		DB4BFAAF20F1482200298E68 /* AbstractServerRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAAE20F1482200298E68 /* AbstractServerRequestFactory.swift */; };
+		DB4BFAB120F1D5FA00298E68 /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAB020F1D5FA00298E68 /* RegistrationData.swift */; };
+		DB4BFAB520F1EA9600298E68 /* PersonalDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAB420F1EA9600298E68 /* PersonalDataRequestFactory.swift */; };
+		DB4BFAB920F1EAD600298E68 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAB820F1EAD600298E68 /* RegisterRequest.swift */; };
+		DB4BFAC920F2345300298E68 /* IUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAC820F2345300298E68 /* IUserInfo.swift */; };
+		DB4BFACC20F2364100298E68 /* GeekBrainsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFACB20F2364100298E68 /* GeekBrainsRequestFactory.swift */; };
+		DB4BFACE20F2365400298E68 /* MyVaporServerRequestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFACD20F2365400298E68 /* MyVaporServerRequestsFactory.swift */; };
+		DB4BFAD020F236F100298E68 /* ServerRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFACF20F236F100298E68 /* ServerRequestFactory.swift */; };
+		DB4BFAD220F2400400298E68 /* MutatePersonalDaraResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAD120F2400400298E68 /* MutatePersonalDaraResult.swift */; };
+		DB4BFAD420F2401500298E68 /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAD320F2401500298E68 /* RegisterResult.swift */; };
+		DB4BFAD620F2404000298E68 /* LogOutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAD520F2404000298E68 /* LogOutResult.swift */; };
+		DB4BFADA20F2432A00298E68 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAD920F2432A00298E68 /* UserInfo.swift */; };
 		DB547ABC20F12F1C00112CBE /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB547ABB20F12F1C00112CBE /* RequestRouter.swift */; };
 		DB547ABE20F1320C00112CBE /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB547ABD20F1320C00112CBE /* AbstractRequestFactory.swift */; };
 		DB547AC120F1394600112CBE /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB547AC020F1394600112CBE /* LoginResult.swift */; };
@@ -48,7 +59,18 @@
 		C87AA9400B470487517FD3FA /* Pods-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shop/Pods-Shop.release.xcconfig"; sourceTree = "<group>"; };
 		DB4BFAA920F13F9700298E68 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		DB4BFAAB20F1420600298E68 /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
-		DB4BFAAE20F1482200298E68 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		DB4BFAAE20F1482200298E68 /* AbstractServerRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractServerRequestFactory.swift; sourceTree = "<group>"; };
+		DB4BFAB020F1D5FA00298E68 /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
+		DB4BFAB420F1EA9600298E68 /* PersonalDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataRequestFactory.swift; sourceTree = "<group>"; };
+		DB4BFAB820F1EAD600298E68 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		DB4BFAC820F2345300298E68 /* IUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserInfo.swift; sourceTree = "<group>"; };
+		DB4BFACB20F2364100298E68 /* GeekBrainsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekBrainsRequestFactory.swift; sourceTree = "<group>"; };
+		DB4BFACD20F2365400298E68 /* MyVaporServerRequestsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVaporServerRequestsFactory.swift; sourceTree = "<group>"; };
+		DB4BFACF20F236F100298E68 /* ServerRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRequestFactory.swift; sourceTree = "<group>"; };
+		DB4BFAD120F2400400298E68 /* MutatePersonalDaraResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutatePersonalDaraResult.swift; sourceTree = "<group>"; };
+		DB4BFAD320F2401500298E68 /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
+		DB4BFAD520F2404000298E68 /* LogOutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutResult.swift; sourceTree = "<group>"; };
+		DB4BFAD920F2432A00298E68 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		DB547ABB20F12F1C00112CBE /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		DB547ABD20F1320C00112CBE /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		DB547AC020F1394600112CBE /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
@@ -107,8 +129,8 @@
 		DB4BFAA820F13F7700298E68 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DB4BFAA920F13F9700298E68 /* AuthRequestFactory.swift */,
-				DB4BFAAB20F1420600298E68 /* AuthRequest.swift */,
+				DB4BFAC720F2328500298E68 /* MyVapoerServerRequests */,
+				DB4BFAC520F2326200298E68 /* GeekBrainsMockServerRequests */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -116,16 +138,83 @@
 		DB4BFAAD20F1480000298E68 /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
-				DB4BFAAE20F1482200298E68 /* RequestFactory.swift */,
+				DB4BFAAE20F1482200298E68 /* AbstractServerRequestFactory.swift */,
+				DB4BFACF20F236F100298E68 /* ServerRequestFactory.swift */,
 			);
 			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		DB4BFABC20F1EAF600298E68 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BFAA920F13F9700298E68 /* AuthRequestFactory.swift */,
+				DB4BFAAB20F1420600298E68 /* AuthRequest.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DB4BFABE20F1EB0900298E68 /* PersonalData */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BFAB420F1EA9600298E68 /* PersonalDataRequestFactory.swift */,
+				DB4BFAB820F1EAD600298E68 /* RegisterRequest.swift */,
+			);
+			path = PersonalData;
+			sourceTree = "<group>";
+		};
+		DB4BFAC520F2326200298E68 /* GeekBrainsMockServerRequests */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BFACB20F2364100298E68 /* GeekBrainsRequestFactory.swift */,
+				DB4BFABE20F1EB0900298E68 /* PersonalData */,
+				DB4BFABC20F1EAF600298E68 /* Auth */,
+			);
+			path = GeekBrainsMockServerRequests;
+			sourceTree = "<group>";
+		};
+		DB4BFAC620F2327900298E68 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DBB5EA7A20EABEBC004A8D6B /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DB4BFAC720F2328500298E68 /* MyVapoerServerRequests */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BFACD20F2365400298E68 /* MyVaporServerRequestsFactory.swift */,
+			);
+			path = MyVapoerServerRequests;
+			sourceTree = "<group>";
+		};
+		DB4BFAD720F2415500298E68 /* RequestResultEntitites */ = {
+			isa = PBXGroup;
+			children = (
+				DB547AC020F1394600112CBE /* LoginResult.swift */,
+				DB547AC220F1394E00112CBE /* User.swift */,
+				DB4BFAD120F2400400298E68 /* MutatePersonalDaraResult.swift */,
+				DB4BFAD320F2401500298E68 /* RegisterResult.swift */,
+				DB4BFAD520F2404000298E68 /* LogOutResult.swift */,
+				DB4BFAB020F1D5FA00298E68 /* RegistrationData.swift */,
+			);
+			path = RequestResultEntitites;
+			sourceTree = "<group>";
+		};
+		DB4BFAD820F2417900298E68 /* AppEntities */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BFAC820F2345300298E68 /* IUserInfo.swift */,
+				DB4BFAD920F2432A00298E68 /* UserInfo.swift */,
+			);
+			path = AppEntities;
 			sourceTree = "<group>";
 		};
 		DB547ABF20F1393100112CBE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				DB547AC020F1394600112CBE /* LoginResult.swift */,
-				DB547AC220F1394E00112CBE /* User.swift */,
+				DB4BFAD820F2417900298E68 /* AppEntities */,
+				DB4BFAD720F2415500298E68 /* RequestResultEntitites */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -227,8 +316,8 @@
 		DBB5EAAD20EABFDC004A8D6B /* AppLogic */ = {
 			isa = PBXGroup;
 			children = (
+				DB4BFAC620F2327900298E68 /* AppDelegate */,
 				DB4BFAA820F13F7700298E68 /* Network */,
-				DBB5EA7A20EABEBC004A8D6B /* AppDelegate.swift */,
 			);
 			path = AppLogic;
 			sourceTree = "<group>";
@@ -438,17 +527,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4BFAAF20F1482200298E68 /* RequestFactory.swift in Sources */,
+				DB4BFAD420F2401500298E68 /* RegisterResult.swift in Sources */,
+				DB4BFAAF20F1482200298E68 /* AbstractServerRequestFactory.swift in Sources */,
 				DBCBEDC020EEA52900C7AC1D /* ResponseDecodable.swift in Sources */,
+				DB4BFAB120F1D5FA00298E68 /* RegistrationData.swift in Sources */,
+				DB4BFACC20F2364100298E68 /* GeekBrainsRequestFactory.swift in Sources */,
 				DB547AC120F1394600112CBE /* LoginResult.swift in Sources */,
 				DB547ABC20F12F1C00112CBE /* RequestRouter.swift in Sources */,
 				DBB5EA7B20EABEBC004A8D6B /* AppDelegate.swift in Sources */,
 				DB547AC320F1394E00112CBE /* User.swift in Sources */,
+				DB4BFAD020F236F100298E68 /* ServerRequestFactory.swift in Sources */,
 				DB4BFAAA20F13F9700298E68 /* AuthRequestFactory.swift in Sources */,
 				DBCBEDBE20EEA32100C7AC1D /* ErrorParser.swift in Sources */,
 				DB547ABE20F1320C00112CBE /* AbstractRequestFactory.swift in Sources */,
 				DBCBEDBC20EEA26600C7AC1D /* AbstractErrorParser.swift in Sources */,
+				DB4BFAD620F2404000298E68 /* LogOutResult.swift in Sources */,
 				DB4BFAAC20F1420600298E68 /* AuthRequest.swift in Sources */,
+				DB4BFAB520F1EA9600298E68 /* PersonalDataRequestFactory.swift in Sources */,
+				DB4BFAB920F1EAD600298E68 /* RegisterRequest.swift in Sources */,
+				DB4BFAD220F2400400298E68 /* MutatePersonalDaraResult.swift in Sources */,
+				DB4BFAC920F2345300298E68 /* IUserInfo.swift in Sources */,
+				DB4BFADA20F2432A00298E68 /* UserInfo.swift in Sources */,
+				DB4BFACE20F2365400298E68 /* MyVaporServerRequestsFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
