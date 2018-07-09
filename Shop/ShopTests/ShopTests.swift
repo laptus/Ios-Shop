@@ -1,13 +1,6 @@
-//
-//  ShopTests.swift
-//  ShopTests
-//
-//  Created by Laptev Sasha on 02/07/2018.
-//  Copyright © 2018 Laptev Sasha. All rights reserved.
-//
-
-import XCTest
 @testable import Shop
+import XCTest
+
 
 class ShopTests: XCTestCase {
     
