@@ -18,7 +18,7 @@ class PersonalInformationRequests: GenericRequest {
 
 extension PersonalInformationRequests: PersonalInformationRequestsFactory {
         
-    func change(userInfo: IUserInfo,
+    func change(userInfo: UserInfo,
                 completionHandler: @escaping (DataResponse<ChangePersonInfoResult>) -> Void) {
         let requestModel = RegistrationRouter(baseURL: baseUrl,
                                               userInfo: userInfo)

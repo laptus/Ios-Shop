@@ -15,5 +15,3 @@ struct LoginResult: Codable {
         self.user = User(id: id, login: login, name: name, lastname: lastname)
     }
 }
-
-

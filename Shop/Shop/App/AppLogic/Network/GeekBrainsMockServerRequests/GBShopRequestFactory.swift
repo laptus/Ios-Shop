@@ -17,13 +17,24 @@ class GBShopRequestFactory: IServerRequestFactory {
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
     
-    func makeAuthRequestFactory() -> Authorizing {
+    func makeAuthRequestFactory() -> AuthRequestsFactory {
         let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return Auth(errorParser: errorParser,
+                    sessionManager: commonSessionManager,
+                    queue: sessionQueue)
     }
     
     func makePersonalDataRequestFactory() -> PersonalInformationRequestsFactory {
         let errorParser = makeErrorParser()
-        return PersonalInformationRequests(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return PersonalInformationRequests(errorParser: errorParser,
+                                           sessionManager: commonSessionManager,
+                                           queue: sessionQueue)
+    }
+    
+    func makeShopRequestsFactory() -> ShopRequestsFactory {
+        let errorParser = makeErrorParser()
+        return ShopRequest(errorParser: errorParser,
+                           sessionManager: commonSessionManager,
+                           queue: sessionQueue)
     }
 }

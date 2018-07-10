@@ -3,6 +3,6 @@ import Foundation
 
 protocol PersonalInformationRequestsFactory {
     
-    func change(userInfo: IUserInfo,
+    func change(userInfo: UserInfo,
                 completionHandler: @escaping (DataResponse<ChangePersonInfoResult>) -> Void)
 }

@@ -26,4 +26,11 @@ class GeekBrainsRequestFactoryMock {
         let errorParser = makeErrorParser()
         return PersonalDataRequests(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
+    
+    func makeShopRequestsFactory() -> ShopRequestsFactory {
+        let errorParser = makeErrorParser()
+        return ShopRequest(errorParser: errorParser,
+                           sessionManager: commonSessionManager,
+                           queue: sessionQueue)
+    }
 }

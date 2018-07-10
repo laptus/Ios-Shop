@@ -17,7 +17,6 @@
 		DB4BFAB120F1D5FA00298E68 /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAB020F1D5FA00298E68 /* RegistrationData.swift */; };
 		DB4BFAB520F1EA9600298E68 /* PersonalInformationRequestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAB420F1EA9600298E68 /* PersonalInformationRequestsFactory.swift */; };
 		DB4BFAB920F1EAD600298E68 /* PersonalInformationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAB820F1EAD600298E68 /* PersonalInformationRequests.swift */; };
-		DB4BFAC920F2345300298E68 /* IUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAC820F2345300298E68 /* IUserInfo.swift */; };
 		DB4BFACE20F2365400298E68 /* MyVaporServerRequestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFACD20F2365400298E68 /* MyVaporServerRequestsFactory.swift */; };
 		DB4BFAD020F236F100298E68 /* ServerRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFACF20F236F100298E68 /* ServerRequestFactory.swift */; };
 		DB4BFAD220F2400400298E68 /* MutatePersonalDaraResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAD120F2400400298E68 /* MutatePersonalDaraResult.swift */; };
@@ -36,9 +35,12 @@
 		DB5EB4BA20F44EC30044543B /* GoodResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4B920F44EC30044543B /* GoodResult.swift */; };
 		DB5EB4BC20F451590044543B /* GoodsOnPageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4BB20F451590044543B /* GoodsOnPageResult.swift */; };
 		DB5EB4BF20F4540B0044543B /* GoodsOnPage.json in Resources */ = {isa = PBXBuildFile; fileRef = DB5EB4BE20F4540B0044543B /* GoodsOnPage.json */; };
+		DB5EB4C320F45DA60044543B /* PersonalDataRequestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4C220F45DA60044543B /* PersonalDataRequestsTest.swift */; };
+		DB5EB4C520F463950044543B /* ShopRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4C420F463950044543B /* ShopRequestTest.swift */; };
+		DB5EB4C720F4648E0044543B /* SimpleResult.json in Resources */ = {isa = PBXBuildFile; fileRef = DB5EB4C620F4648E0044543B /* SimpleResult.json */; };
 		DB80981820F2990D00F96EAE /* ErrorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80981720F2990D00F96EAE /* ErrorStub.swift */; };
 		DB80981920F2996800F96EAE /* GBShopRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFACB20F2364100298E68 /* GBShopRequestFactory.swift */; };
-		DB80981A20F2999600F96EAE /* GeekBrainsRequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77ED9720F2989800D07ADF /* GeekBrainsRequestFactoryMock.swift */; };
+		DB80981A20F2999600F96EAE /* GBRequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77ED9720F2989800D07ADF /* GBRequestFactoryMock.swift */; };
 		DB80981C20F29B0500F96EAE /* AuthRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80981B20F29B0500F96EAE /* AuthRequestTest.swift */; };
 		DBB5EA7B20EABEBC004A8D6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB5EA7A20EABEBC004A8D6B /* AppDelegate.swift */; };
 		DBB5EA8220EABEBD004A8D6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB5EA8120EABEBD004A8D6B /* Assets.xcassets */; };
@@ -81,7 +83,6 @@
 		DB4BFAB020F1D5FA00298E68 /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
 		DB4BFAB420F1EA9600298E68 /* PersonalInformationRequestsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationRequestsFactory.swift; sourceTree = "<group>"; };
 		DB4BFAB820F1EAD600298E68 /* PersonalInformationRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationRequests.swift; sourceTree = "<group>"; };
-		DB4BFAC820F2345300298E68 /* IUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserInfo.swift; sourceTree = "<group>"; };
 		DB4BFACB20F2364100298E68 /* GBShopRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopRequestFactory.swift; sourceTree = "<group>"; };
 		DB4BFACD20F2365400298E68 /* MyVaporServerRequestsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVaporServerRequestsFactory.swift; sourceTree = "<group>"; };
 		DB4BFACF20F236F100298E68 /* ServerRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRequestFactory.swift; sourceTree = "<group>"; };
@@ -103,7 +104,10 @@
 		DB5EB4BE20F4540B0044543B /* GoodsOnPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoodsOnPage.json; sourceTree = "<group>"; };
 		DB5EB4C020F454250044543B /* GoodsOnPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoodsOnPage.json; sourceTree = "<group>"; };
 		DB5EB4C120F454290044543B /* loginStub.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loginStub.json; sourceTree = "<group>"; };
-		DB77ED9720F2989800D07ADF /* GeekBrainsRequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekBrainsRequestFactoryMock.swift; sourceTree = "<group>"; };
+		DB5EB4C220F45DA60044543B /* PersonalDataRequestsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataRequestsTest.swift; sourceTree = "<group>"; };
+		DB5EB4C420F463950044543B /* ShopRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequestTest.swift; sourceTree = "<group>"; };
+		DB5EB4C620F4648E0044543B /* SimpleResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SimpleResult.json; sourceTree = "<group>"; };
+		DB77ED9720F2989800D07ADF /* GBRequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBRequestFactoryMock.swift; sourceTree = "<group>"; };
 		DB80981720F2990D00F96EAE /* ErrorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStub.swift; sourceTree = "<group>"; };
 		DB80981B20F29B0500F96EAE /* AuthRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestTest.swift; sourceTree = "<group>"; };
 		DBB5EA7720EABEBC004A8D6B /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,7 +246,6 @@
 		DB4BFAD820F2417900298E68 /* AppEntities */ = {
 			isa = PBXGroup;
 			children = (
-				DB4BFAC820F2345300298E68 /* IUserInfo.swift */,
 				DB4BFAD920F2432A00298E68 /* UserInfo.swift */,
 			);
 			path = AppEntities;
@@ -315,10 +318,12 @@
 			children = (
 				DB5EB4BD20F453E70044543B /* MockJsons */,
 				DBB5EA9120EABEBE004A8D6B /* Info.plist */,
-				DB77ED9720F2989800D07ADF /* GeekBrainsRequestFactoryMock.swift */,
+				DB77ED9720F2989800D07ADF /* GBRequestFactoryMock.swift */,
 				DB03431A20F2536500C09FB9 /* ResponseCodableTest.swift */,
 				DB80981720F2990D00F96EAE /* ErrorStub.swift */,
 				DB80981B20F29B0500F96EAE /* AuthRequestTest.swift */,
+				DB5EB4C220F45DA60044543B /* PersonalDataRequestsTest.swift */,
+				DB5EB4C420F463950044543B /* ShopRequestTest.swift */,
 			);
 			path = ShopTests;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				DB473A2820F2A838006A3829 /* loginStub.json */,
 				DBB5EA8320EABEBD004A8D6B /* LaunchScreen.storyboard */,
 				DBB5EA8120EABEBD004A8D6B /* Assets.xcassets */,
+				DB5EB4C620F4648E0044543B /* SimpleResult.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -515,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB473A2920F2A841006A3829 /* loginStub.json in Resources */,
+				DB5EB4C720F4648E0044543B /* SimpleResult.json in Resources */,
 				DBB5EA8520EABEBD004A8D6B /* LaunchScreen.storyboard in Resources */,
 				DBB5EA8220EABEBD004A8D6B /* Assets.xcassets in Resources */,
 			);
@@ -639,7 +646,6 @@
 				DB4BFAB920F1EAD600298E68 /* PersonalInformationRequests.swift in Sources */,
 				DB5EB4BA20F44EC30044543B /* GoodResult.swift in Sources */,
 				DB4BFAD220F2400400298E68 /* MutatePersonalDaraResult.swift in Sources */,
-				DB4BFAC920F2345300298E68 /* IUserInfo.swift in Sources */,
 				DB4BFADA20F2432A00298E68 /* UserInfo.swift in Sources */,
 				DB4BFACE20F2365400298E68 /* MyVaporServerRequestsFactory.swift in Sources */,
 				DB5EB4BC20F451590044543B /* GoodsOnPageResult.swift in Sources */,
@@ -652,7 +658,9 @@
 			files = (
 				DB03431B20F2536500C09FB9 /* ResponseCodableTest.swift in Sources */,
 				DB80981820F2990D00F96EAE /* ErrorStub.swift in Sources */,
-				DB80981A20F2999600F96EAE /* GeekBrainsRequestFactoryMock.swift in Sources */,
+				DB5EB4C320F45DA60044543B /* PersonalDataRequestsTest.swift in Sources */,
+				DB5EB4C520F463950044543B /* ShopRequestTest.swift in Sources */,
+				DB80981A20F2999600F96EAE /* GBRequestFactoryMock.swift in Sources */,
 				DB80981C20F29B0500F96EAE /* AuthRequestTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

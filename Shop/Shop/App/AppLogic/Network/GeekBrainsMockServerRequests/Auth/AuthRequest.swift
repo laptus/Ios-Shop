@@ -17,8 +17,8 @@ class Auth: GenericRequest {
     }
 }
 
-extension Auth: Authorizing {
-    func register(userInfo: IUserInfo,
+extension Auth: AuthRequestsFactory {
+    func register(userInfo: UserInfo,
                   completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
         let requestModel = RegistrationRouter(baseURL: baseUrl,
                                               userInfo: userInfo)
@@ -35,5 +35,3 @@ extension Auth: Authorizing {
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
 }
-
-

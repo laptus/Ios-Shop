@@ -19,10 +19,14 @@ class ShopRequest: GenericRequest {
 
 extension ShopRequest: ShopRequestsFactory {
     func goods(page: Int, categoryId: Int,
-               completionHandler: @escaping (DataResponse<GoodsOnPageResult>) -> Void){
+               completionHandler: @escaping (DataResponse<GoodsOnPageResult>) -> Void) {
         let requestModel = CatalogRouter(baseURL: baseUrl, pageNumber: page, cetegoryId: categoryId)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
+    
+    func good(goodId: Int,
+              completionHandler: @escaping (DataResponse<GoodsOnPageResult>) -> Void) {
+        let requestModel = GoodRouter(baseURL: baseUrl, productId: goodId)
+        self.request(reques: requestModel, completionHandler: completionHandler)
+    }
 }
-
-
