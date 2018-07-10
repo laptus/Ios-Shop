@@ -1,8 +1,9 @@
 import Alamofire
 import Foundation
+import OHHTTPStubs
 @testable import Shop
 
-class GeekBrainsRequestFactoryStub {
+class GeekBrainsRequestFactoryMock {
     func makeErrorParser() -> AbstractErrorParser {
         return ErrorParserStub()
     }
@@ -10,7 +11,7 @@ class GeekBrainsRequestFactoryStub {
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.ephemeral
         var manager = SessionManager(configuration: configuration)
-        //manager = Alamofire.SessionManager.default
+        OHHTTPStubs.isEnabled(for: configuration)
         return manager
     }()
     
@@ -23,6 +24,6 @@ class GeekBrainsRequestFactoryStub {
     
     func makePersonalDataRequestFactory() -> PersonalDataRequestFactory {
         let errorParser = makeErrorParser()
-        return PersonalDataRequest(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return PersonalDataRequests(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
 }

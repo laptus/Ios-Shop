@@ -1,7 +1,10 @@
 import Alamofire
 import Foundation
 
-protocol AuthRequestFactory {
+protocol Authorizing {
+    func register(userInfo: IUserInfo,
+                  completionHandler: @escaping (DataResponse<RegisterResult>) -> Void)
+    
     func login(username: String,
                password: String,
                completionHandler: @escaping(DataResponse<LoginResult>) -> Void)

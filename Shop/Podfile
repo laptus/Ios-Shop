@@ -6,5 +6,11 @@ target 'Shop' do
   use_frameworks!
   pod 'SwiftLint'
   pod 'Alamofire', '~> 4.7'
+  pod 'OHHTTPStubs/Swift'
+end
 
+target 'ShopTests' do
+    inherit! :search_paths
+    pod 'Alamofire', '~> 4.7'
+    pod 'OHHTTPStubs/Swift'
 end

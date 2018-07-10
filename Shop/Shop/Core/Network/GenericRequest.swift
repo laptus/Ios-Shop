@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-protocol AbstractRequestFactory {
+protocol GenericRequest {
     var errorParser: AbstractErrorParser { get }
     var sessionManager: SessionManager { get }
     var queue: DispatchQueue? { get }
@@ -11,7 +11,7 @@ protocol AbstractRequestFactory {
                                completionHandler: @escaping(DataResponse<T>) -> Void) -> DataRequest
 }
 
-extension AbstractRequestFactory {
+extension GenericRequest {
     @discardableResult
     func request<T: Decodable>(reques: URLRequestConvertible,
                                completionHandler: @escaping(DataResponse<T>) -> Void) -> DataRequest {

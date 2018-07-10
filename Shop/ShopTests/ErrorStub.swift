@@ -1,9 +1,16 @@
-//
-//  ErrorStub.swift
-//  ShopTests
-//
-//  Created by Laptev Sasha on 08/07/2018.
-//  Copyright © 2018 Laptev Sasha. All rights reserved.
-//
-
 import Foundation
+@testable import Shop
+
+enum ApiErrorStub: Error {
+    case fatalError
+}
+
+struct ErrorParserStub: AbstractErrorParser {
+    func parse(_ result: Error) -> Error {
+        return ApiErrorStub.fatalError
+    }
+    
+    func parse(response: HTTPURLResponse?, data: Data?, error: Error?) -> Error? {
+        return error
+    }
+}

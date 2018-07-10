@@ -1,5 +1,5 @@
-@testable import Shop
 import Alamofire
+@testable import Shop
 import XCTest
 
 struct PostStub: Codable {
@@ -9,21 +9,7 @@ struct PostStub: Codable {
     let body: String
 }
 
-enum ApiErrorStub: Error {
-    case fatalError
-}
-
-struct ErrorParserStub: AbstractErrorParser {
-    func parse(_ result: Error) -> Error {
-        return ApiErrorStub.fatalError
-    }
-    
-    func parse(response: HTTPURLResponse?, data: Data?, error: Error?) -> Error? {
-        return error
-    }
-}
-
-class ResponseCodable: XCTestCase {
+class ResponseCodableTest: XCTestCase {
     var errorParser: ErrorParserStub!
     
     override func setUp() {
@@ -38,28 +24,29 @@ class ResponseCodable: XCTestCase {
     
     func testShouldFailWrongURL() {
         let exp = XCTestExpectation(description: "Download https://failURL")
+        
         Alamofire.request("https://failURL")
-            .responseCodable(errorParser: errorParser){ [weak self] (response: DataResponse<PostStub>) in
+            .responseCodable(errorParser: errorParser) {(response: DataResponse<PostStub>) in
                 switch response.result {
-                case .success( _ ):
+                case .success:
                     break
-                case .failure( _ ):
-                    XCTFail()
+                case .failure:
+                    XCTFail("123")
                 }
                 exp.fulfill()
         }
-        wait(for: [exp], timeout: 10.0)
+        wait(for: [exp], timeout: 1.0)
     }
     
     func testShouldLoadAndPArse() {
         let exp = XCTestExpectation(description: "")
         var post:  PostStub?
         Alamofire.request("https://failURL")
-            .responseCodable(errorParser: errorParser){ [weak self] (response: DataResponse<PostStub>) in
+            .responseCodable(errorParser: errorParser) {(response: DataResponse<PostStub>) in
                 post = response.value
                 exp.fulfill()
         }
-        wait(for: [exp], timeout: 10.0)
+        wait(for: [exp], timeout: 1.0)
         XCTAssertNil(post)
     }
 }
