@@ -3,10 +3,10 @@ import Foundation
 
 class AbstractServerRequestFactory {
     static func returnGeekBrainsRequestFactory() -> IServerRequestFactory {
-        return GeekBrainsRequestFactory()
+        return GBShopRequestFactory()
     }
     
     static func returnVaporRequestFactory() -> IServerRequestFactory {
-        return GeekBrainsRequestFactory()
+        return GBShopRequestFactory()
     }
 }

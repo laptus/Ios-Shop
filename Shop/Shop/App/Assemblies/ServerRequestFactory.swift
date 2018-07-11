@@ -1,6 +1,6 @@
 import Foundation
 
 protocol IServerRequestFactory {
-    func makeAuthRequestFactory() -> AuthRequestFactory
-    func makePersonalDataRequestFactory() -> PersonalDataRequestFactory
+    func makeAuthRequestFactory() -> AuthRequestsFactory
+    func makePersonalDataRequestFactory() -> PersonalInformationRequestsFactory
 }

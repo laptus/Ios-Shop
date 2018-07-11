@@ -1,7 +1,7 @@
 import Foundation
 
-struct UserInfo: Codable, IUserInfo {
-    var id: String
+struct UserInfo: Codable {
+    var id: Int
     var name: String
     var password: String
     var eMail: String

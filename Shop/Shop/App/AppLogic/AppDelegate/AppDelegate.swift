@@ -12,17 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var requestFactory: IServerRequestFactory
+    var requestFactory: GBShopRequestFactory
     
     override init() {
-        requestFactory = AbstractServerRequestFactory.returnGeekBrainsRequestFactory()
+        requestFactory = GBShopRequestFactory()
         super.init()
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let auth = requestFactory.makeAuthRequestFactory()
-        auth.login(username: "Somebody", password: "mypassword", completionHandler: {response in
+        let auth = requestFactory.makeShopRequestsFactory()
+        auth.good(goodId: 1, completionHandler: {response in
             switch response.result {
             case .success(let login):
                 print(login)
