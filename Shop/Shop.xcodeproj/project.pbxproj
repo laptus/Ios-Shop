@@ -32,8 +32,7 @@
 		DB5EB4B420F3DC7C0044543B /* CatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4B320F3DC7C0044543B /* CatalogService.swift */; };
 		DB5EB4B620F3DC8E0044543B /* CatalogRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4B520F3DC8E0044543B /* CatalogRouters.swift */; };
 		DB5EB4B820F3E0FA0044543B /* PersonalInformationRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4B720F3E0FA0044543B /* PersonalInformationRouters.swift */; };
-		DB5EB4BA20F44EC30044543B /* GoodResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4B920F44EC30044543B /* GoodResult.swift */; };
-		DB5EB4BC20F451590044543B /* GoodsOnPageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4BB20F451590044543B /* GoodsOnPageResult.swift */; };
+		DB5EB4BA20F44EC30044543B /* GoodOnPageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4B920F44EC30044543B /* GoodOnPageResult.swift */; };
 		DB5EB4BF20F4540B0044543B /* GoodsOnPage.json in Resources */ = {isa = PBXBuildFile; fileRef = DB5EB4BE20F4540B0044543B /* GoodsOnPage.json */; };
 		DB5EB4C320F45DA60044543B /* PersonalDataRequestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4C220F45DA60044543B /* PersonalDataRequestsTest.swift */; };
 		DB5EB4C520F463950044543B /* ShopRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4C420F463950044543B /* ShopRequestTest.swift */; };
@@ -50,6 +49,7 @@
 		DBCBEDBE20EEA32100C7AC1D /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBEDBD20EEA32100C7AC1D /* ErrorParser.swift */; };
 		DBCBEDC020EEA52900C7AC1D /* ResponseDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBEDBF20EEA52900C7AC1D /* ResponseDecodable.swift */; };
 		DBF55E5320F681BC0049DDFC /* GBShopRequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF55E5220F681BC0049DDFC /* GBShopRequestConfig.swift */; };
+		DBF55E5520F7CF220049DDFC /* GetGoodResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF55E5420F7CF220049DDFC /* GetGoodResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,8 +100,7 @@
 		DB5EB4B320F3DC7C0044543B /* CatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogService.swift; sourceTree = "<group>"; };
 		DB5EB4B520F3DC8E0044543B /* CatalogRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRouters.swift; sourceTree = "<group>"; };
 		DB5EB4B720F3E0FA0044543B /* PersonalInformationRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationRouters.swift; sourceTree = "<group>"; };
-		DB5EB4B920F44EC30044543B /* GoodResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodResult.swift; sourceTree = "<group>"; };
-		DB5EB4BB20F451590044543B /* GoodsOnPageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsOnPageResult.swift; sourceTree = "<group>"; };
+		DB5EB4B920F44EC30044543B /* GoodOnPageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodOnPageResult.swift; sourceTree = "<group>"; };
 		DB5EB4BE20F4540B0044543B /* GoodsOnPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoodsOnPage.json; sourceTree = "<group>"; };
 		DB5EB4C020F454250044543B /* GoodsOnPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoodsOnPage.json; sourceTree = "<group>"; };
 		DB5EB4C120F454290044543B /* loginStub.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loginStub.json; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		DBCBEDBD20EEA32100C7AC1D /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		DBCBEDBF20EEA52900C7AC1D /* ResponseDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecodable.swift; sourceTree = "<group>"; };
 		DBF55E5220F681BC0049DDFC /* GBShopRequestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopRequestConfig.swift; sourceTree = "<group>"; };
+		DBF55E5420F7CF220049DDFC /* GetGoodResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoodResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,8 +240,8 @@
 				DB4BFAD320F2401500298E68 /* RegisterResult.swift */,
 				DB4BFAD520F2404000298E68 /* LogOutResult.swift */,
 				DB4BFAB020F1D5FA00298E68 /* RegistrationData.swift */,
-				DB5EB4B920F44EC30044543B /* GoodResult.swift */,
-				DB5EB4BB20F451590044543B /* GoodsOnPageResult.swift */,
+				DB5EB4B920F44EC30044543B /* GoodOnPageResult.swift */,
+				DBF55E5420F7CF220049DDFC /* GetGoodResult.swift */,
 			);
 			path = RequestResultEntitites;
 			sourceTree = "<group>";
@@ -646,13 +646,13 @@
 				DB4BFAAC20F1420600298E68 /* AuthService.swift in Sources */,
 				DB5EB4B220F3DC640044543B /* CatalogRequestsFactory.swift in Sources */,
 				DB80981920F2996800F96EAE /* GBShopRequestFactory.swift in Sources */,
+				DBF55E5520F7CF220049DDFC /* GetGoodResult.swift in Sources */,
 				DB4BFAB520F1EA9600298E68 /* PersonalInformationRequestsFactory.swift in Sources */,
 				DB4BFAB920F1EAD600298E68 /* PersonalInformationService.swift in Sources */,
-				DB5EB4BA20F44EC30044543B /* GoodResult.swift in Sources */,
+				DB5EB4BA20F44EC30044543B /* GoodOnPageResult.swift in Sources */,
 				DB4BFAD220F2400400298E68 /* MutatePersonalDaraResult.swift in Sources */,
 				DB4BFADA20F2432A00298E68 /* UserInfo.swift in Sources */,
 				DB4BFACE20F2365400298E68 /* MyVaporServerRequestsFactory.swift in Sources */,
-				DB5EB4BC20F451590044543B /* GoodsOnPageResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

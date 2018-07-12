@@ -18,7 +18,7 @@ extension CatalogRequest {
     struct GoodRouter: RequestRouter {
         let baseURL: URL
         let method: HTTPMethod = .get
-        let path: String = ""
+        let path: String = "getGoodById.json"
         var parameters: Parameters? {
             return ["id_product": productId]
         }

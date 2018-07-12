@@ -1,7 +1,11 @@
 import Alamofire
 import Foundation
 
-class Auth: GBShopRequestConfig, GenericRequest {
+class Auth: GenericRequest {
+    var errorParser: AbstractErrorParser
+    var sessionManager: SessionManager
+    var queue: DispatchQueue?
+    let baseUrl: URL = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
     init(errorParser: AbstractErrorParser,
          sessionManager: SessionManager,
@@ -9,7 +13,6 @@ class Auth: GBShopRequestConfig, GenericRequest {
         self.errorParser = errorParser
         self.sessionManager = sessionManager
         self.queue = queue
-        baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     }
 }
 
@@ -26,7 +29,7 @@ extension Auth: AuthRequestsFactory {
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     
-    func logout(userId: String, completionHandler: @escaping (DataResponse<LogOutResult>) -> Void) {
+    func logout(userId: Int, completionHandler: @escaping (DataResponse<LogOutResult>) -> Void) {
         let requestModel = LogOut(baseURL: baseUrl, userId: userId)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }

@@ -5,7 +5,7 @@ extension PersonalInformationRequests {
     struct RegistrationRouter: RequestRouter {
         let baseURL: URL
         let method: HTTPMethod = .get
-        let path: String = ""
+        let path: String = "changeUserData.json"
         var parameters: Parameters? {
             return ["id_user": userInfo.id,
                     "username": userInfo.name,

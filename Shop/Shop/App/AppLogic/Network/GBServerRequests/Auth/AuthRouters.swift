@@ -5,7 +5,7 @@ extension Auth {
     struct RegistrationRouter: RequestRouter {
         let baseURL: URL
         let method: HTTPMethod = .get
-        let path: String = ""
+        let path: String = "registerUser.json"
         var parameters: Parameters? {
             return ["id_user": userInfo.id,
                     "username": userInfo.name,
@@ -40,6 +40,6 @@ extension Auth {
             return ["id_user": userId]
         }
         
-        let userId: String
+        let userId: Int
     }
 }

@@ -6,7 +6,7 @@ struct User: Codable {
     let name: String
     let lastname: String
     
-    enum CodigKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id = "id_user"
         case login = "user_login"
         case name = "user_name"

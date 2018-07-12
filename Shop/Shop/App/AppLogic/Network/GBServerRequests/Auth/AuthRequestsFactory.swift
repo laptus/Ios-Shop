@@ -9,6 +9,6 @@ protocol AuthRequestsFactory {
                password: String,
                completionHandler: @escaping(DataResponse<LoginResult>) -> Void)
     
-    func logout(userId: String,
+    func logout(userId: Int,
                 completionHandler: @escaping(DataResponse<LogOutResult>) -> Void)
 }

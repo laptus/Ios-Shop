@@ -4,8 +4,8 @@ import Foundation
 protocol CatalogRequestsFactory {
     func goods(page: Int,
                categoryId: Int,
-               completionHandler: @escaping (DataResponse<GoodsOnPageResult>) -> Void)
+               completionHandler: @escaping (DataResponse<[GoodOnPageResult]>) -> Void)
     
     func good(goodId: Int,
-              completionHandler: @escaping (DataResponse<GoodsOnPageResult>) -> Void)
+              completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
 }
