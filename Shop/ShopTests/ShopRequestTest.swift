@@ -6,7 +6,7 @@ import XCTest
 class ShopRequestsTest: XCTestCase {
     var errorParser: ErrorParserStub!
     
-    var shopFactory: ShopRequestsFactory?
+    var shopFactory: CatalogRequestsFactory?
     
     override func setUp() {
         super.setUp()

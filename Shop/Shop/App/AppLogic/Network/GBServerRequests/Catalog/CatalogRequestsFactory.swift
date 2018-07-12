@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-protocol ShopRequestsFactory {
+protocol CatalogRequestsFactory {
     func goods(page: Int,
                categoryId: Int,
                completionHandler: @escaping (DataResponse<GoodsOnPageResult>) -> Void)

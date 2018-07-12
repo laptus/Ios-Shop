@@ -1,11 +1,7 @@
 import Alamofire
 import Foundation
 
-class Auth: GenericRequest {
-    let errorParser: AbstractErrorParser
-    let sessionManager: SessionManager
-    let queue: DispatchQueue?
-    let baseUrl: URL
+class Auth: GBShopRequestConfig, GenericRequest {
     
     init(errorParser: AbstractErrorParser,
          sessionManager: SessionManager,

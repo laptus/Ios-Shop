@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-extension ShopRequest {
+extension CatalogRequest {
     struct CatalogRouter: RequestRouter {
         let baseURL: URL
         let method: HTTPMethod = .get

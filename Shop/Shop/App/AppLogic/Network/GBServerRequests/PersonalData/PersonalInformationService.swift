@@ -7,7 +7,7 @@ class PersonalInformationRequests: GenericRequest {
     let queue: DispatchQueue?
     let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
-    init(errorParser: AbstractErrorParser,
+    init(config: GBShopRequestConfig,
          sessionManager: SessionManager,
          queue: DispatchQueue? = DispatchQueue.global(qos: .utility)) {
         self.errorParser = errorParser

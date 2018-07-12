@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-class ShopRequest: GenericRequest {
+class CatalogRequest: GenericRequest {
     let errorParser: AbstractErrorParser
     let sessionManager: SessionManager
     let queue: DispatchQueue?
@@ -17,7 +17,7 @@ class ShopRequest: GenericRequest {
     }
 }
 
-extension ShopRequest: ShopRequestsFactory {
+extension CatalogRequest: CatalogRequestsFactory {
     func goods(page: Int, categoryId: Int,
                completionHandler: @escaping (DataResponse<GoodsOnPageResult>) -> Void) {
         let requestModel = CatalogRouter(baseURL: baseUrl, pageNumber: page, cetegoryId: categoryId)
