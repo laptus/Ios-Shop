@@ -11,11 +11,11 @@ protocol CatalogRequestsFactory {
     
     func addReview(idUser: Int,
                    text: String,
-                   completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+                   completionHandler: @escaping (DataResponse<AddReviewResult>) -> Void)
     
     func approveReview(idComment: Int,
-                       completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+                       completionHandler: @escaping (DataResponse<ApproveReviewResult>) -> Void)
     
     func removeReview(idComment: Int,
-                      completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+                      completionHandler: @escaping (DataResponse<RemoveReviewResult>) -> Void)
 }

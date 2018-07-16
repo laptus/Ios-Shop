@@ -20,7 +20,7 @@ class ShopRequestsTest: XCTestCase {
         OHHTTPStubs.removeAllStubs()
     }
     
-    func testPersInfChange() {
+    func testGoodsOnPageChange() {
         let exp = XCTestExpectation(description: "Download https://failURL")
         let fileUrl = Bundle.main.url(forResource: "GoodsOnPage", withExtension: "json")!
         stub(condition: isMethodGET() &&

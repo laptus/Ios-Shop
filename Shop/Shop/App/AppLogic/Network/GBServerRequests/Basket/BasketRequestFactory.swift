@@ -5,11 +5,11 @@ protocol BasketRequestsFactory {
    
     func addToBasket(idProduct: Int,
                      quantity: Int,
-                     completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+                     completionHandler: @escaping (DataResponse<AddToBasketResult>) -> Void)
     
     func deleteFromBasket(idProduct: Int,
-                          completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+                          completionHandler: @escaping (DataResponse<RemoveFromBasketResult>) -> Void)
     
     func getBasket(idUser: Int,
-                   completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+                   completionHandler: @escaping (DataResponse<GetBasketResult>) -> Void)
 }

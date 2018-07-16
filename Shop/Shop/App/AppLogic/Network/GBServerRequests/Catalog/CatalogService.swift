@@ -19,19 +19,19 @@ extension CatalogService: CatalogRequestsFactory {
     
     func addReview(idUser: Int,
                    text: String,
-                   completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void) {
+                   completionHandler: @escaping (DataResponse<AddReviewResult>) -> Void) {
         let requestModel = AddReviewRouter(baseURL: baseUrl, idUser: idUser, text: text)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     
     func approveReview(idComment: Int,
-                       completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void) {
+                       completionHandler: @escaping (DataResponse<ApproveReviewResult>) -> Void) {
         let requestModel = ApproveReviewRouter(baseURL: baseUrl, idComment: idComment)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     
     func removeReview(idComment: Int,
-                      completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void) {
+                      completionHandler: @escaping (DataResponse<RemoveReviewResult>) -> Void) {
         let requestModel = RemoveReviewRouter(baseURL: baseUrl, idComment: idComment)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }

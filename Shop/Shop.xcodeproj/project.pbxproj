@@ -19,7 +19,6 @@
 		DB3E3E8E20FD0E8E0063697F /* AddToBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E8D20FD0E8E0063697F /* AddToBasketResult.swift */; };
 		DB3E3E9020FD0E9A0063697F /* RemoveFromBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E8F20FD0E9A0063697F /* RemoveFromBasketResult.swift */; };
 		DB3E3E9220FD0EA70063697F /* GetBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E9120FD0EA70063697F /* GetBasketResult.swift */; };
-		DB3E3E9420FD0F4A0063697F /* BasketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E9320FD0F4A0063697F /* BasketTest.swift */; };
 		DB473A2920F2A841006A3829 /* loginStub.json in Resources */ = {isa = PBXBuildFile; fileRef = DB473A2820F2A838006A3829 /* loginStub.json */; };
 		DB4BFAAA20F13F9700298E68 /* AuthRequestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAA920F13F9700298E68 /* AuthRequestsFactory.swift */; };
 		DB4BFAAC20F1420600298E68 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFAAB20F1420600298E68 /* AuthService.swift */; };
@@ -92,7 +91,6 @@
 		DB3E3E8D20FD0E8E0063697F /* AddToBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToBasketResult.swift; sourceTree = "<group>"; };
 		DB3E3E8F20FD0E9A0063697F /* RemoveFromBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveFromBasketResult.swift; sourceTree = "<group>"; };
 		DB3E3E9120FD0EA70063697F /* GetBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResult.swift; sourceTree = "<group>"; };
-		DB3E3E9320FD0F4A0063697F /* BasketTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTest.swift; sourceTree = "<group>"; };
 		DB473A2820F2A838006A3829 /* loginStub.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loginStub.json; sourceTree = "<group>"; };
 		DB4BFAA920F13F9700298E68 /* AuthRequestsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestsFactory.swift; sourceTree = "<group>"; };
 		DB4BFAAB20F1420600298E68 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 		DB3E3E9920FD0F6D0063697F /* Basket */ = {
 			isa = PBXGroup;
 			children = (
-				DB3E3E9320FD0F4A0063697F /* BasketTest.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -767,7 +764,6 @@
 				DB80981820F2990D00F96EAE /* ErrorStub.swift in Sources */,
 				DB5EB4C320F45DA60044543B /* UserDataTest.swift in Sources */,
 				DB5EB4C520F463950044543B /* CatalogTest.swift in Sources */,
-				DB3E3E9420FD0F4A0063697F /* BasketTest.swift in Sources */,
 				DB80981A20F2999600F96EAE /* GBRequestFactoryMock.swift in Sources */,
 				DB80981C20F29B0500F96EAE /* AuthTest.swift in Sources */,
 			);
