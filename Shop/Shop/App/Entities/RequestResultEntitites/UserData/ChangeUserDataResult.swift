@@ -1,5 +1,5 @@
 import Foundation
 
-struct ChangePersonInfoResult: Codable {
+struct ChangeUserDataResult: Codable {
     let result: Int
 }

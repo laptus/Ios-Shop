@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-struct GBShopRequestConfig {
+class GBShopRequestConfig: GenericRequest {
     var errorParser: AbstractErrorParser
     var sessionManager: SessionManager
     var queue: DispatchQueue?

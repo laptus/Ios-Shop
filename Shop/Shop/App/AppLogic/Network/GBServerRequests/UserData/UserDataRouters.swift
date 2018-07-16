@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-extension PersonalInformationRequests {
+extension UserDataService {
     struct RegistrationRouter: RequestRouter {
         let baseURL: URL
         let method: HTTPMethod = .get

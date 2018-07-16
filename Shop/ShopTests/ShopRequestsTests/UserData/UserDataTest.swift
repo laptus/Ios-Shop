@@ -6,7 +6,7 @@ import XCTest
 class PersonalDataRequestsTest: XCTestCase {
     var errorParser: ErrorParserStub!
     
-    var perInfFactory: PersonalInformationRequestsFactory?
+    var perInfFactory: UserDataRequestsFactory?
     
     override func setUp() {
         super.setUp()
@@ -34,7 +34,7 @@ class PersonalDataRequestsTest: XCTestCase {
             pathEndsWith("login.json")) { _ in
                 return OHHTTPStubsResponse(fileURL: fileUrl, statusCode: 200, headers: nil)
         }
-        var user: ChangePersonInfoResult?
+        var user: ChangeUserDataResult?
         perInfFactory?.change(userInfo: userMock, completionHandler: {response in
             user = response.value
             exp.fulfill()
