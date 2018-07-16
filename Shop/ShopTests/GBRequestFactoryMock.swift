@@ -17,19 +17,19 @@ class GeekBrainsRequestFactoryMock {
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
     
-    func makeAuthRequestFactory() -> AuthRequestFactory {
+    func makeAuthRequestFactory() -> AuthRequestsFactory {
         let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return AuthService(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
     
-    func makePersonalDataRequestFactory() -> PersonalDataRequestFactory {
+    func makeUserDataRequestFactory() -> UserDataRequestsFactory {
         let errorParser = makeErrorParser()
-        return PersonalDataRequests(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
+        return UserDataService(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue)
     }
     
-    func makeShopRequestsFactory() -> CatalogRequestsFactory {
+    func makeCatalogRequestsFactory() -> CatalogRequestsFactory {
         let errorParser = makeErrorParser()
-        return ShopRequest(errorParser: errorParser,
+        return CatalogService(errorParser: errorParser,
                            sessionManager: commonSessionManager,
                            queue: sessionQueue)
     }

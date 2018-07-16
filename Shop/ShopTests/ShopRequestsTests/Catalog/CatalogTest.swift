@@ -11,7 +11,7 @@ class ShopRequestsTest: XCTestCase {
     override func setUp() {
         super.setUp()
         let requestFactory = GeekBrainsRequestFactoryMock()
-        shopFactory = requestFactory.makeShopRequestsFactory()
+        shopFactory = requestFactory.makeCatalogRequestsFactory()
     }
     
     override func tearDown() {

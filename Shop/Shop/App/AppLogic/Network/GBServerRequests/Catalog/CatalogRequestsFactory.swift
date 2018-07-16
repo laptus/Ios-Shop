@@ -8,4 +8,14 @@ protocol CatalogRequestsFactory {
     
     func good(goodId: Int,
               completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+    
+    func addReview(idUser: Int,
+                   text: String,
+                   completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+    
+    func approveReview(idComment: Int,
+                       completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+    
+    func removeReview(idComment: Int,
+                      completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
 }

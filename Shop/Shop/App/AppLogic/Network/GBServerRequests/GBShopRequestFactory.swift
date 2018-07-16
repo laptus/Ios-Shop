@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-class GBShopRequestFactory: IServerRequestFactory {
+class GBShopRequestFactory {
     
     func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
@@ -29,22 +29,22 @@ class GBShopRequestFactory: IServerRequestFactory {
     
     func makeAuthRequestFactory() -> AuthRequestsFactory {
         let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser,
+        return AuthService(errorParser: errorParser,
                     sessionManager: commonSessionManager,
                     queue: sessionQueue)
     }
     
-    func makePersonalDataRequestFactory() -> PersonalInformationRequestsFactory {
+    func makePersonalDataRequestFactory() -> UserDataRequestsFactory {
         let errorParser = makeErrorParser()
         
-        return PersonalInformationRequests(errorParser: errorParser,
+        return UserDataService(errorParser: errorParser,
                                            sessionManager: commonSessionManager,
                                            queue: sessionQueue)
     }
     
     func makeShopRequestsFactory() -> CatalogRequestsFactory {
         let errorParser = makeErrorParser()
-        return CatalogRequest(errorParser: errorParser,
+        return CatalogService(errorParser: errorParser,
                            sessionManager: commonSessionManager,
                            queue: sessionQueue)
     }

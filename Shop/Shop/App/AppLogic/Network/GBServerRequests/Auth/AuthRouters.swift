@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-extension Auth {
+extension AuthService {
     struct RegistrationRouter: RequestRouter {
         let baseURL: URL
         let method: HTTPMethod = .get

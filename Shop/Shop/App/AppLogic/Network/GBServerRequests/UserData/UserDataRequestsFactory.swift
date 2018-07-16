@@ -4,5 +4,5 @@ import Foundation
 protocol UserDataRequestsFactory {
     
     func change(userInfo: UserInfo,
-                completionHandler: @escaping (DataResponse<ChangePersonInfoResult>) -> Void)
+                completionHandler: @escaping (DataResponse<ChangeUserDataResult>) -> Void)
 }

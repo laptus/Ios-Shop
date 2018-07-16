@@ -1,22 +1,10 @@
 import Alamofire
 import Foundation
 
-class Auth: GenericRequest {
-    var errorParser: AbstractErrorParser
-    var sessionManager: SessionManager
-    var queue: DispatchQueue?
-    let baseUrl: URL = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
-    
-    init(errorParser: AbstractErrorParser,
-         sessionManager: SessionManager,
-         queue: DispatchQueue? = DispatchQueue.global(qos: .utility)) {
-        self.errorParser = errorParser
-        self.sessionManager = sessionManager
-        self.queue = queue
-    }
+class AuthService: GBShopSessionManager {
 }
 
-extension Auth: AuthRequestsFactory {
+extension AuthService: AuthRequestsFactory {
     func register(userInfo: UserInfo,
                   completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
         let requestModel = RegistrationRouter(baseURL: baseUrl,

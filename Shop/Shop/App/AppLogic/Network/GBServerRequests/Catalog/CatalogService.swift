@@ -1,23 +1,10 @@
 import Alamofire
 import Foundation
 
-class CatalogRequest: GenericRequest {
-    let errorParser: AbstractErrorParser
-    let sessionManager: SessionManager
-    let queue: DispatchQueue?
-    let baseUrl: URL
-    
-    init(errorParser: AbstractErrorParser,
-         sessionManager: SessionManager,
-         queue: DispatchQueue? = DispatchQueue.global(qos: .utility)) {
-        self.errorParser = errorParser
-        self.sessionManager = sessionManager
-        self.queue = queue
-        baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
-    }
+class CatalogService: GBShopSessionManager {
 }
 
-extension CatalogRequest: CatalogRequestsFactory {
+extension CatalogService: CatalogRequestsFactory {
     func goods(page: Int, categoryId: Int,
                completionHandler: @escaping (DataResponse<[GoodOnPageResult]>) -> Void) {
         let requestModel = CatalogRouter(baseURL: baseUrl, pageNumber: page, cetegoryId: categoryId)
@@ -27,6 +14,25 @@ extension CatalogRequest: CatalogRequestsFactory {
     func good(goodId: Int,
               completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void) {
         let requestModel = GoodRouter(baseURL: baseUrl, productId: goodId)
+        self.request(reques: requestModel, completionHandler: completionHandler)
+    }
+    
+    func addReview(idUser: Int,
+                   text: String,
+                   completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void) {
+        let requestModel = AddReviewRouter(baseURL: baseUrl, idUser: idUser, text: text)
+        self.request(reques: requestModel, completionHandler: completionHandler)
+    }
+    
+    func approveReview(idComment: Int,
+                       completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void) {
+        let requestModel = ApproveReviewRouter(baseURL: baseUrl, idComment: idComment)
+        self.request(reques: requestModel, completionHandler: completionHandler)
+    }
+    
+    func removeReview(idComment: Int,
+                      completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void) {
+        let requestModel = RemoveReviewRouter(baseURL: baseUrl, idComment: idComment)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
 }
