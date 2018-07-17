@@ -21,15 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let auth = requestFactory.makeShopRequestsFactory()
-        auth.good(goodId: 1, completionHandler: {response in
-            switch response.result {
-            case .success(let login):
-                print(login)
-            case .failure(let error):
-                print(error)
-            }
-        })
+
         return true
     }
 
