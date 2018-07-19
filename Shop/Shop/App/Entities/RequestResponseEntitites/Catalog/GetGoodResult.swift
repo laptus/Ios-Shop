@@ -1,6 +1,11 @@
 import Foundation
 
+/// struct for getting goods from catalog 
 struct GetGoodResult: Codable {
+    
+    /**
+     - result: request result (> 0 - successful)
+     */
     let result: Int
     let name: String
     let price: Int

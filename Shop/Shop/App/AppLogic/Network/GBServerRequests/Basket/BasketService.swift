@@ -2,25 +2,30 @@ import Alamofire
 import Foundation
 
 class BasketService: GBShopSessionManager {
-
+    
 }
 
+/// gb shop basket service
 extension BasketService: BasketRequestsFactory {
-    func addToBasket(idProduct: Int,
-                     quantity: Int,
-                     completionHandler: @escaping (DataResponse<AddToBasketResult>) -> Void) {
+    
+    func add(idProduct: Int,
+             quantity: Int,
+             completionHandler: @escaping RequestVoidCompletion<AddToBasketResult>) {
+        
         let requestModel = AddToBasketRouter(baseURL: baseUrl, idPorduct: idProduct, quantity: quantity)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     
-    func deleteFromBasket(idProduct: Int,
-                          completionHandler: @escaping (DataResponse<RemoveFromBasketResult>) -> Void) {
+    func delete(idProduct: Int,
+                completionHandler: @escaping RequestVoidCompletion<RemoveFromBasketResult>) {
+        
         let requestModel = DeleteFromBasketRouter(baseURL: baseUrl, idPorduct: idProduct)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     
-    func getBasket(idUser: Int,
-                   completionHandler: @escaping (DataResponse<GetBasketResult>) -> Void) {
+    func getContents(idUser: Int,
+                     completionHandler: @escaping RequestVoidCompletion<GetContentsResult>) {
+        
         let requestModel = GetBasketRouter(baseURL: baseUrl, idUser: idUser)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }

@@ -1,6 +1,8 @@
 import Foundation
 
+/// struct for getting goods from catalog 
 struct GoodOnPageResult: Codable {
+    
     let id: Int
     let name: String
     let price: Int

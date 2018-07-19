@@ -1,7 +1,12 @@
 import Foundation
 
+/// custom error parser
 class ErrorParser: AbstractErrorParser {
-    func parse(response: HTTPURLResponse?, data: Data?, error: Error?) -> Error? {
+    
+    func parse(response: HTTPURLResponse?,
+               data: Data?,
+               error: Error?) -> Error? {
+        
         return error
     }
     

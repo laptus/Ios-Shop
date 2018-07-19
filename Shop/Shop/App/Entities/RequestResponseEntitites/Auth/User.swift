@@ -1,6 +1,8 @@
 import Foundation
 
+/// user data in login request answer
 struct User: Codable {
+    
     let id: Int
     let login: String
     let name: String

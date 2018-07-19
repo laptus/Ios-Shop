@@ -4,9 +4,11 @@ disabled_rules:
   - object_literal # Prefer object literals over image and color inits. object literal breaks down IBDesignable
 
 opt_in_rules:
+  - class_delegate_protocol #Delegate protocols should be class-only so they can be weakly referenced.
   - closure_parameter_position # Closure parameters should be on the same line as opening brace.
   - closure_end_indentation # Closure end should have the same indentation as the line that started it.
   - closure_spacing # Closure expressions should have a single space inside each brace.
+  - comma # There should be no space before and one after any comma
   - operator_usage_whitespace # Operators should be surrounded by a single whitespace when they are being used.
   - explicit_init # Explicitly calling .init() should be avoided.
   - first_where # Prefer using .first(where:) over .filter { }.first in collections.

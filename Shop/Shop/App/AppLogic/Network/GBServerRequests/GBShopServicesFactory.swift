@@ -1,39 +1,40 @@
 import Alamofire
 import Foundation
 
-class GBShopRequestFactory {
+typealias RequestVoidCompletion<T> = (DataResponse<T>) -> Void
+
+/// fabric of gbShop services
+class GBShopServicesFactory {
     
-    func makeErrorParser() -> AbstractErrorParser {
+    private func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
     }
     
-    lazy var commonSessionManager: SessionManager = {
+    private lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpShouldSetCookies = false
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+        
         var manager = SessionManager(configuration: configuration)
-        //manager = Alamofire.SessionManager.default
         return manager
     }()
     
-    lazy var commonSessionConfig: SessionManager = {
-        let configuration = URLSessionConfiguration.default
-        configuration.httpShouldSetCookies = false
-        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
-        var manager = SessionManager(configuration: configuration)
-        //manager = Alamofire.SessionManager.default
-        return manager
-    }()
+    private let sessionQueue = DispatchQueue.global(qos: .utility)
     
-    let sessionQueue = DispatchQueue.global(qos: .utility)
-    
+    /**
+     returns authtorization service
+     */
     func makeAuthRequestFactory() -> AuthRequestsFactory {
         let errorParser = makeErrorParser()
+        
         return AuthService(errorParser: errorParser,
                     sessionManager: commonSessionManager,
                     queue: sessionQueue)
     }
     
+    /**
+     returns user data service
+     */
     func makePersonalDataRequestFactory() -> UserDataRequestsFactory {
         let errorParser = makeErrorParser()
         
@@ -42,10 +43,25 @@ class GBShopRequestFactory {
                                            queue: sessionQueue)
     }
     
-    func makeShopRequestsFactory() -> CatalogRequestsFactory {
+    /**
+     returns shop's catalog service
+     */
+    func makeCatalogRequestsFactory() -> CatalogRequestsFactory {
         let errorParser = makeErrorParser()
+        
         return CatalogService(errorParser: errorParser,
                            sessionManager: commonSessionManager,
                            queue: sessionQueue)
+    }
+    
+    /**
+     returns basket service
+     */
+    func makeBasketRequestsFactory() -> BasketRequestsFactory {
+        let errorParser = makeErrorParser()
+        
+        return BasketService(errorParser: errorParser,
+                              sessionManager: commonSessionManager,
+                              queue: sessionQueue)
     }
 }
