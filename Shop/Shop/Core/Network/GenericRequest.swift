@@ -1,7 +1,10 @@
 import Alamofire
 import Foundation
 
+
+/// generic request fabric
 protocol GenericRequest {
+    
     var errorParser: AbstractErrorParser { get }
     var sessionManager: SessionManager { get }
     var queue: DispatchQueue? { get }
@@ -12,6 +15,7 @@ protocol GenericRequest {
 }
 
 extension GenericRequest {
+    
     @discardableResult
     func request<T: Decodable>(reques: URLRequestConvertible,
                                completionHandler: @escaping(DataResponse<T>) -> Void) -> DataRequest {

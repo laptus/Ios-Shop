@@ -1,26 +1,18 @@
-//
-//  AppDelegate.swift
-//  Shop
-//
-//  Created by Laptev Sasha on 02/07/2018.
-//  Copyright © 2018 Laptev Sasha. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var requestFactory: GBShopRequestFactory
+    var requestFactory: GBShopServicesFactory
     
     override init() {
-        requestFactory = GBShopRequestFactory()
+        requestFactory = GBShopServicesFactory()
         super.init()
     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions
-        launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         return true
     }

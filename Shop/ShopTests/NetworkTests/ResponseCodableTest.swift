@@ -34,22 +34,19 @@ class ResponseCodableTest: XCTestCase {
                     XCTFail("123")
                 }
                 exp.fulfill()
-        }
+            }
         wait(for: [exp], timeout: 1.0)
     }
     
     func testShouldLoadAndPArse() {
         let exp = XCTestExpectation(description: "")
-        var post:  PostStub?
+        var post: PostStub?
         Alamofire.request("https://failURL")
             .responseCodable(errorParser: errorParser) {(response: DataResponse<PostStub>) in
                 post = response.value
                 exp.fulfill()
-        }
+            }
         wait(for: [exp], timeout: 1.0)
         XCTAssertNil(post)
     }
 }
-
-
-

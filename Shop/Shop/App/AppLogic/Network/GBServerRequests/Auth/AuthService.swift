@@ -4,20 +4,28 @@ import Foundation
 class AuthService: GBShopSessionManager {
 }
 
+/// gb shop auth service
 extension AuthService: AuthRequestsFactory {
-    func register(userInfo: UserInfo,
-                  completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
+    
+    func register(user: UserInfo,
+                  completionHandler: @escaping RequestVoidCompletion<RegisterResult>) {
+        
         let requestModel = RegistrationRouter(baseURL: baseUrl,
-                                              userInfo: userInfo)
+                                              userInfo: user)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     
-    func login(username: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
+    func login(username: String,
+               password: String,
+               completionHandler: @escaping RequestVoidCompletion<LoginResult>) {
+        
         let requestModel = Login(baseURL: baseUrl, login: username, password: password)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     
-    func logout(userId: Int, completionHandler: @escaping (DataResponse<LogOutResult>) -> Void) {
+    func logout(userId: Int,
+                completionHandler: @escaping RequestVoidCompletion<LogOutResult>) {
+        
         let requestModel = LogOut(baseURL: baseUrl, userId: userId)
         self.request(reques: requestModel, completionHandler: completionHandler)
     }

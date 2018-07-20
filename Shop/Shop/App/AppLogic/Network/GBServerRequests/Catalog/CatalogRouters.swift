@@ -6,6 +6,7 @@ extension CatalogService {
         let baseURL: URL
         let method: HTTPMethod = .get
         let path: String = "catalogData.json"
+        
         var parameters: Parameters? {
             return ["page_number": pageNumber,
                     "id_category": cetegoryId]
@@ -19,6 +20,7 @@ extension CatalogService {
         let baseURL: URL
         let method: HTTPMethod = .get
         let path: String = "getGoodById.json"
+        
         var parameters: Parameters? {
             return ["id_product": productId]
         }
@@ -30,6 +32,7 @@ extension CatalogService {
         let baseURL: URL
         let method: HTTPMethod = .get
         let path: String = "addReview.json"
+        
         var parameters: Parameters? {
             return ["id_user": idUser,
                     "text": text]
@@ -43,6 +46,7 @@ extension CatalogService {
         let baseURL: URL
         let method: HTTPMethod = .get
         let path: String = "approveReview.json"
+        
         var parameters: Parameters? {
             return ["id_comment": idComment]
         }
@@ -54,6 +58,7 @@ extension CatalogService {
         let baseURL: URL
         let method: HTTPMethod = .get
         let path: String = "removeReview.json"
+        
         var parameters: Parameters? {
             return ["id_comment": idComment]
         }

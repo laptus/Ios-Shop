@@ -1,6 +1,12 @@
 import Foundation
 
+/// struct - answer fot login reqeust answer
 struct LoginResult: Codable {
+    
+    /**
+     - result: request result (> 0 - successful)
+     - user: user data in response (if successful)
+    */
     let result: Int
     let user: User
      

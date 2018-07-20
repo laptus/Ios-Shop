@@ -4,18 +4,18 @@ import Foundation
 protocol CatalogRequestsFactory {
     func goods(page: Int,
                categoryId: Int,
-               completionHandler: @escaping (DataResponse<[GoodOnPageResult]>) -> Void)
+               completionHandler: @escaping RequestVoidCompletion<[GoodOnPageResult]>)
     
     func good(goodId: Int,
-              completionHandler: @escaping (DataResponse<GetGoodResult>) -> Void)
+              completionHandler: @escaping RequestVoidCompletion<GetGoodResult>)
     
     func addReview(idUser: Int,
                    text: String,
-                   completionHandler: @escaping (DataResponse<AddReviewResult>) -> Void)
+                   completionHandler: @escaping RequestVoidCompletion<AddReviewResult>)
     
     func approveReview(idComment: Int,
-                       completionHandler: @escaping (DataResponse<ApproveReviewResult>) -> Void)
+                       completionHandler: @escaping RequestVoidCompletion<ApproveReviewResult>)
     
     func removeReview(idComment: Int,
-                      completionHandler: @escaping (DataResponse<RemoveReviewResult>) -> Void)
+                      completionHandler: @escaping RequestVoidCompletion<RemoveReviewResult>)
 }

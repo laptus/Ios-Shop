@@ -1,15 +1,16 @@
 import Alamofire
 import Foundation
 
+/// abstract service class
 protocol BasketRequestsFactory {
-   
-    func addToBasket(idProduct: Int,
-                     quantity: Int,
-                     completionHandler: @escaping (DataResponse<AddToBasketResult>) -> Void)
     
-    func deleteFromBasket(idProduct: Int,
-                          completionHandler: @escaping (DataResponse<RemoveFromBasketResult>) -> Void)
+    func add(idProduct: Int,
+             quantity: Int,
+             completionHandler: @escaping RequestVoidCompletion<AddToBasketResult>)
     
-    func getBasket(idUser: Int,
-                   completionHandler: @escaping (DataResponse<GetBasketResult>) -> Void)
+    func delete(idProduct: Int,
+                completionHandler: @escaping RequestVoidCompletion<RemoveFromBasketResult>)
+    
+    func getContents(idUser: Int,
+                     completionHandler: @escaping RequestVoidCompletion<GetContentsResult>)
 }

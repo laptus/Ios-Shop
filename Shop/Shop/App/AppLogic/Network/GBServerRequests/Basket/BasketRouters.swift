@@ -3,6 +3,7 @@ import Foundation
 
 extension BasketService {
     struct AddToBasketRouter: RequestRouter {
+        
         let baseURL: URL
         let method: HTTPMethod = .get
         let path: String = "addToBasket.json"
@@ -16,6 +17,7 @@ extension BasketService {
     }
     
     struct DeleteFromBasketRouter: RequestRouter {
+        
         let baseURL: URL
         let method: HTTPMethod = .get
         let path: String = "deleteFromBasket.json"
@@ -27,6 +29,7 @@ extension BasketService {
     }
     
     struct GetBasketRouter: RequestRouter {
+        
         let baseURL: URL
         let method: HTTPMethod = .get
         let path: String = "getBasket.json"

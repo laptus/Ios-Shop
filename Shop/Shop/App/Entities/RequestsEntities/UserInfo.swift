@@ -1,6 +1,8 @@
 import Foundation
 
+/// struct for auth and changing user data requests
 struct UserInfo: Codable {
+    
     var id: Int
     var name: String
     var password: String

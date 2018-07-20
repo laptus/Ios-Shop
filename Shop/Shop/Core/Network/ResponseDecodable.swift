@@ -2,10 +2,12 @@ import Alamofire
 import Foundation
 
 extension DataRequest {
+    
     @discardableResult
     func responseCodable<T: Decodable>( errorParser: AbstractErrorParser,
                                         qeue: DispatchQueue? = nil,
                                         completionHandler: @escaping(DataResponse<T>) -> Void) -> Self {
+        
         let responseSerializer = DataResponseSerializer<T>(serializeResponse: { request, response, data, error in
             if let error = errorParser.parse(response: response, data: data, error: error) {
                 return .failure(error)
