@@ -60,7 +60,7 @@ class AuthSerivceTest: BaseServiceTest {
         httpStub(pathEnd: "registerUser.json")
         
         var user: RegisterResult?
-        authFactory?.register(user: userMock,  completionHandler: {response in
+        authFactory?.register(user: userMock, completionHandler: {response in
             user = response.value
             exp.fulfill()
         })

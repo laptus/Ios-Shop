@@ -10,6 +10,21 @@
 		78EFD9119368FE58EFB74F65 /* Pods_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D23AE9250A27589F6DCA2D9 /* Pods_Shop.framework */; };
 		C1E192119E0FEB5E6C4CDE7B /* libPods-ShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA44CBA06FD174BFAED79029 /* libPods-ShopTests.a */; };
 		DB03431B20F2536500C09FB9 /* ResponseCodableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03431A20F2536500C09FB9 /* ResponseCodableTest.swift */; };
+		DB15630B2108F74800427D7F /* AuthSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB15630A2108F74800427D7F /* AuthSB.storyboard */; };
+		DB1563102108FC3700427D7F /* UserDataSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB15630F2108FC3700427D7F /* UserDataSB.storyboard */; };
+		DB1563132108FC9700427D7F /* CatalogSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1563122108FC9700427D7F /* CatalogSB.storyboard */; };
+		DB156316210A4F7400427D7F /* CatalogTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156315210A4F7400427D7F /* CatalogTableVC.swift */; };
+		DB156318210A4F9000427D7F /* UserDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156317210A4F9000427D7F /* UserDataVC.swift */; };
+		DB15631A210A4FD600427D7F /* StoreTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156319210A4FD600427D7F /* StoreTabVC.swift */; };
+		DB15631C210A54D200427D7F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15631B210A54D200427D7F /* AuthViewModel.swift */; };
+		DB156320210A636F00427D7F /* StoreSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB15631F210A636F00427D7F /* StoreSB.storyboard */; };
+		DB156322210A650000427D7F /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156321210A650000427D7F /* CatalogViewModel.swift */; };
+		DB156326210A6BDE00427D7F /* GoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156325210A6BDE00427D7F /* GoodCell.swift */; };
+		DB156328210A73C800427D7F /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156327210A73C800427D7F /* UserDataViewModel.swift */; };
+		DB15632A210A73FB00427D7F /* EditUserDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156329210A73FB00427D7F /* EditUserDataVC.swift */; };
+		DB15632C210A740800427D7F /* EditUserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15632B210A740800427D7F /* EditUserDataViewModel.swift */; };
+		DB15632E210A74FB00427D7F /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15632D210A74FB00427D7F /* RegisterVC.swift */; };
+		DB156330210A750700427D7F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15632F210A750700427D7F /* RegisterViewModel.swift */; };
 		DB3E3E7D20FCF3DA0063697F /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E7C20FCF3DA0063697F /* BasketRequestFactory.swift */; };
 		DB3E3E7F20FCF3EA0063697F /* BasketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E7E20FCF3EA0063697F /* BasketService.swift */; };
 		DB3E3E8120FCF3F50063697F /* BasketRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E8020FCF3F50063697F /* BasketRouters.swift */; };
@@ -59,6 +74,7 @@
 		DBB3F94E21011FE40062F41C /* logout.json in Resources */ = {isa = PBXBuildFile; fileRef = DBB3F94D21011FE40062F41C /* logout.json */; };
 		DBB3F95021011FF50062F41C /* registerUser.json in Resources */ = {isa = PBXBuildFile; fileRef = DBB3F94F21011FF50062F41C /* registerUser.json */; };
 		DBB3F952210120090062F41C /* removeReview.json in Resources */ = {isa = PBXBuildFile; fileRef = DBB3F951210120090062F41C /* removeReview.json */; };
+		DBB3F959210386190062F41C /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3F958210386190062F41C /* AuthVC.swift */; };
 		DBB5EA7B20EABEBC004A8D6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB5EA7A20EABEBC004A8D6B /* AppDelegate.swift */; };
 		DBB5EA8220EABEBD004A8D6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB5EA8120EABEBD004A8D6B /* Assets.xcassets */; };
 		DBB5EA8520EABEBD004A8D6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB5EA8320EABEBD004A8D6B /* LaunchScreen.storyboard */; };
@@ -95,6 +111,21 @@
 		BA44CBA06FD174BFAED79029 /* libPods-ShopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87AA9400B470487517FD3FA /* Pods-Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shop/Pods-Shop.release.xcconfig"; sourceTree = "<group>"; };
 		DB03431A20F2536500C09FB9 /* ResponseCodableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTest.swift; sourceTree = "<group>"; };
+		DB15630A2108F74800427D7F /* AuthSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthSB.storyboard; sourceTree = "<group>"; };
+		DB15630F2108FC3700427D7F /* UserDataSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDataSB.storyboard; sourceTree = "<group>"; };
+		DB1563122108FC9700427D7F /* CatalogSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CatalogSB.storyboard; sourceTree = "<group>"; };
+		DB156315210A4F7400427D7F /* CatalogTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableVC.swift; sourceTree = "<group>"; };
+		DB156317210A4F9000427D7F /* UserDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataVC.swift; sourceTree = "<group>"; };
+		DB156319210A4FD600427D7F /* StoreTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTabVC.swift; sourceTree = "<group>"; };
+		DB15631B210A54D200427D7F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		DB15631F210A636F00427D7F /* StoreSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreSB.storyboard; sourceTree = "<group>"; };
+		DB156321210A650000427D7F /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		DB156325210A6BDE00427D7F /* GoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodCell.swift; sourceTree = "<group>"; };
+		DB156327210A73C800427D7F /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
+		DB156329210A73FB00427D7F /* EditUserDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDataVC.swift; sourceTree = "<group>"; };
+		DB15632B210A740800427D7F /* EditUserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDataViewModel.swift; sourceTree = "<group>"; };
+		DB15632D210A74FB00427D7F /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		DB15632F210A750700427D7F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		DB3E3E7C20FCF3DA0063697F /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
 		DB3E3E7E20FCF3EA0063697F /* BasketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketService.swift; sourceTree = "<group>"; };
 		DB3E3E8020FCF3F50063697F /* BasketRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRouters.swift; sourceTree = "<group>"; };
@@ -146,6 +177,7 @@
 		DBB3F94D21011FE40062F41C /* logout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = logout.json; sourceTree = "<group>"; };
 		DBB3F94F21011FF50062F41C /* registerUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = registerUser.json; sourceTree = "<group>"; };
 		DBB3F951210120090062F41C /* removeReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = removeReview.json; sourceTree = "<group>"; };
+		DBB3F958210386190062F41C /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		DBB5EA7720EABEBC004A8D6B /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB5EA7A20EABEBC004A8D6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB5EA8120EABEBD004A8D6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,6 +231,57 @@
 				651B3BB52294C6FA595CC9F6 /* Pods-ShopTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB15630C2108F77100427D7F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DBB3F958210386190062F41C /* AuthVC.swift */,
+				DB15631B210A54D200427D7F /* AuthViewModel.swift */,
+				DB15632D210A74FB00427D7F /* RegisterVC.swift */,
+				DB15632F210A750700427D7F /* RegisterViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DB15630E2108FC0D00427D7F /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				DB156317210A4F9000427D7F /* UserDataVC.swift */,
+				DB156327210A73C800427D7F /* UserDataViewModel.swift */,
+				DB156329210A73FB00427D7F /* EditUserDataVC.swift */,
+				DB15632B210A740800427D7F /* EditUserDataViewModel.swift */,
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
+		DB1563112108FC8400427D7F /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				DB156315210A4F7400427D7F /* CatalogTableVC.swift */,
+				DB156321210A650000427D7F /* CatalogViewModel.swift */,
+				DB156325210A6BDE00427D7F /* GoodCell.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		DB156314210A4F3F00427D7F /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				DB15630F2108FC3700427D7F /* UserDataSB.storyboard */,
+				DB15630A2108F74800427D7F /* AuthSB.storyboard */,
+				DB1563122108FC9700427D7F /* CatalogSB.storyboard */,
+				DB15631F210A636F00427D7F /* StoreSB.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		DB15631E210A634A00427D7F /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				DB156319210A4FD600427D7F /* StoreTabVC.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		DB3E3E7B20FCF3BA0063697F /* Basket */ = {
@@ -513,6 +596,11 @@
 		DBB5EAAB20EABF21004A8D6B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				DB15631E210A634A00427D7F /* Store */,
+				DB156314210A4F3F00427D7F /* StoryBoards */,
+				DB1563112108FC8400427D7F /* Catalog */,
+				DB15630E2108FC0D00427D7F /* UserData */,
+				DB15630C2108F77100427D7F /* Auth */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -666,8 +754,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB473A2920F2A841006A3829 /* loginStub.json in Resources */,
+				DB1563132108FC9700427D7F /* CatalogSB.storyboard in Resources */,
 				DB5EB4C720F4648E0044543B /* SimpleResult.json in Resources */,
 				DBB3F94021011F270062F41C /* addToBasket.json in Resources */,
+				DB1563102108FC3700427D7F /* UserDataSB.storyboard in Resources */,
 				DBB5EA8520EABEBD004A8D6B /* LaunchScreen.storyboard in Resources */,
 				DBB3F94821011F920062F41C /* deleteFromBasket.json in Resources */,
 				DBB3F952210120090062F41C /* removeReview.json in Resources */,
@@ -677,9 +767,11 @@
 				DBB3F94421011F620062F41C /* catalogData.json in Resources */,
 				DBB3F93E21011F0B0062F41C /* addReview.json in Resources */,
 				DBB3F94C21011FBE0062F41C /* getGoodById.json in Resources */,
+				DB156320210A636F00427D7F /* StoreSB.storyboard in Resources */,
 				DBB5EA8220EABEBD004A8D6B /* Assets.xcassets in Resources */,
 				DBB3F94621011F7A0062F41C /* changeUserData.json in Resources */,
 				DBB3F95021011FF50062F41C /* registerUser.json in Resources */,
+				DB15630B2108F74800427D7F /* AuthSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,21 +875,29 @@
 				DB3E3E8120FCF3F50063697F /* BasketRouters.swift in Sources */,
 				DB547AC120F1394600112CBE /* LoginResult.swift in Sources */,
 				DB5EB4B820F3E0FA0044543B /* UserDataRouters.swift in Sources */,
+				DBB3F959210386190062F41C /* AuthVC.swift in Sources */,
+				DB15632A210A73FB00427D7F /* EditUserDataVC.swift in Sources */,
 				DB547ABC20F12F1C00112CBE /* RequestRouter.swift in Sources */,
+				DB156322210A650000427D7F /* CatalogViewModel.swift in Sources */,
 				DB5EB4B620F3DC8E0044543B /* CatalogRouters.swift in Sources */,
 				DB3E3E8C20FD0E620063697F /* RemoveReviewResult.swift in Sources */,
 				DB3E3E7D20FCF3DA0063697F /* BasketRequestFactory.swift in Sources */,
+				DB15631C210A54D200427D7F /* AuthViewModel.swift in Sources */,
 				DBB5EA7B20EABEBC004A8D6B /* AppDelegate.swift in Sources */,
 				DB547AC320F1394E00112CBE /* User.swift in Sources */,
 				DB4BFAAA20F13F9700298E68 /* AuthRequestsFactory.swift in Sources */,
 				DBCBEDBE20EEA32100C7AC1D /* ErrorParser.swift in Sources */,
 				DB3E3E7F20FCF3EA0063697F /* BasketService.swift in Sources */,
 				DB5EB4AF20F3DA8D0044543B /* AuthRouters.swift in Sources */,
+				DB156318210A4F9000427D7F /* UserDataVC.swift in Sources */,
+				DB156316210A4F7400427D7F /* CatalogTableVC.swift in Sources */,
 				DB547ABE20F1320C00112CBE /* GenericRequest.swift in Sources */,
 				DBCBEDBC20EEA26600C7AC1D /* AbstractErrorParser.swift in Sources */,
+				DB15632E210A74FB00427D7F /* RegisterVC.swift in Sources */,
 				DB5EB4B420F3DC7C0044543B /* CatalogService.swift in Sources */,
 				DB4BFAD620F2404000298E68 /* LogOutResult.swift in Sources */,
 				DB4BFAAC20F1420600298E68 /* AuthService.swift in Sources */,
+				DB15631A210A4FD600427D7F /* StoreTabVC.swift in Sources */,
 				DB5EB4B220F3DC640044543B /* CatalogRequestsFactory.swift in Sources */,
 				DB80981920F2996800F96EAE /* GBShopServicesFactory.swift in Sources */,
 				DB3E3E9220FD0EA70063697F /* GetContentsResult.swift in Sources */,
@@ -806,11 +906,15 @@
 				DB4BFAB520F1EA9600298E68 /* UserDataRequestsFactory.swift in Sources */,
 				DB3E3E8A20FD0E570063697F /* ApproveReviewResult.swift in Sources */,
 				DB4BFAB920F1EAD600298E68 /* UserDataService.swift in Sources */,
+				DB156328210A73C800427D7F /* UserDataViewModel.swift in Sources */,
+				DB15632C210A740800427D7F /* EditUserDataViewModel.swift in Sources */,
 				DB5EB4BA20F44EC30044543B /* GoodOnPageResult.swift in Sources */,
+				DB156326210A6BDE00427D7F /* GoodCell.swift in Sources */,
 				DB3E3E9020FD0E9A0063697F /* RemoveFromBasketResult.swift in Sources */,
 				DB4BFAD220F2400400298E68 /* ChangeUserDataResult.swift in Sources */,
 				DB4BFADA20F2432A00298E68 /* UserInfo.swift in Sources */,
 				DB3E3E8720FD0E2F0063697F /* AddReviewResult.swift in Sources */,
+				DB156330210A750700427D7F /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
