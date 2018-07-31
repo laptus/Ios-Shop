@@ -1,11 +1,13 @@
 import UIKit
 
-class AuthVC: UIViewController {
+class AuthVC: UIViewController, AuthView {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var login: UITextField!
     @IBOutlet weak var password: UITextField!
     
     var viewModel: AuthViewModel?
+    
+    var onCompleteAuth: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +32,13 @@ class AuthVC: UIViewController {
                                                   object: nil)
     }
     
-    @IBAction func registered(segue:UIStoryboardSegue) {
-        let userInfo = (segue.source as! RegisterVC).userInfo
+    @IBAction func registered(segue: UIStoryboardSegue) {
+        guard let userInfo = (segue.source as? RegisterVC)?.userInfo else {
+            return
+        }
         viewModel?.register(userInfo: userInfo, completionHandler: {[weak self] recievedError in
             if let error = recievedError {
-                // ошибку выдать
+               self?.showAlert(error: error, title: "Ooops")
             } else {
                 self?.tryToLogin()
             }
@@ -44,7 +48,7 @@ class AuthVC: UIViewController {
 
 extension AuthVC {
     @IBAction func register(_ sender: Any) {
-        //перейти на экран регистраии
+        self.performSegue(withIdentifier: "toRegister", sender: self)
     }
     
     @IBAction func login(_ sender: Any) {
@@ -56,7 +60,7 @@ extension AuthVC {
             if let error = recievedError {
                 // ошибку выдать
             } else {
-                self?.tryToLogin()
+                self?.onCompleteAuth?()
             }
         })
     }

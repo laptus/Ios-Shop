@@ -6,7 +6,7 @@ class CatalogViewModel: NSObject, UITableViewDataSource, UITableViewDelegate {
     var catalogService: CatalogRequestsFactory
     
     override init() {
-        catalogService = GBShopServicesFactory().makeCatalogRequestsFactory()
+        catalogService = GBShopServicesFactory.instance().makeCatalogRequestsFactory()
         super.init()
     }
     
