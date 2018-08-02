@@ -91,6 +91,7 @@
 		DB80981920F2996800F96EAE /* GBShopServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BFACB20F2364100298E68 /* GBShopServicesFactory.swift */; };
 		DB80981A20F2999600F96EAE /* GBServicesFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77ED9720F2989800D07ADF /* GBServicesFactoryMock.swift */; };
 		DB80981C20F29B0500F96EAE /* AuthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80981B20F29B0500F96EAE /* AuthTest.swift */; };
+		DBA18DED2112FEA2004C4547 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA18DEC2112FEA2004C4547 /* Alert.swift */; };
 		DBB3F93A20FFCA400062F41C /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3F93920FFCA400062F41C /* BasketTests.swift */; };
 		DBB3F93C210114B60062F41C /* BaseServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3F93B210114B60062F41C /* BaseServiceTest.swift */; };
 		DBB3F93E21011F0B0062F41C /* addReview.json in Resources */ = {isa = PBXBuildFile; fileRef = DBB3F93D21011F0B0062F41C /* addReview.json */; };
@@ -224,6 +225,7 @@
 		DB77ED9720F2989800D07ADF /* GBServicesFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBServicesFactoryMock.swift; sourceTree = "<group>"; };
 		DB80981720F2990D00F96EAE /* ErrorStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStub.swift; sourceTree = "<group>"; };
 		DB80981B20F29B0500F96EAE /* AuthTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTest.swift; sourceTree = "<group>"; };
+		DBA18DEC2112FEA2004C4547 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		DBB3F93920FFCA400062F41C /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
 		DBB3F93B210114B60062F41C /* BaseServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceTest.swift; sourceTree = "<group>"; };
 		DBB3F93D21011F0B0062F41C /* addReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addReview.json; sourceTree = "<group>"; };
@@ -673,6 +675,14 @@
 			path = MockJsons;
 			sourceTree = "<group>";
 		};
+		DBA18DEB2112FE8E004C4547 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				DBA18DEC2112FEA2004C4547 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		DBB3F953210120150062F41C /* JsonsMocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,6 +789,7 @@
 		DBB5EAAB20EABF21004A8D6B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				DBA18DEB2112FE8E004C4547 /* Alert */,
 				DB156362210E3F5900427D7F /* Extensions */,
 				DB156345210E1A5800427D7F /* Router */,
 				DB156334210E10CA00427D7F /* Coordinator */,
@@ -1118,6 +1129,7 @@
 				DB4BFAB920F1EAD600298E68 /* UserDataService.swift in Sources */,
 				DB156358210E210F00427D7F /* AuthView.swift in Sources */,
 				DB156328210A73C800427D7F /* UserDataViewModel.swift in Sources */,
+				DBA18DED2112FEA2004C4547 /* Alert.swift in Sources */,
 				DB156364210E3F7C00427D7F /* UIViewControllerExtensions.swift in Sources */,
 				DB156336210E112700427D7F /* LinkingOptions.swift in Sources */,
 				DB15632C210A740800427D7F /* EditUserDataViewModel.swift in Sources */,
