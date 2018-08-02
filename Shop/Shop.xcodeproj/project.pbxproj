@@ -15,7 +15,7 @@
 		DB1563132108FC9700427D7F /* CatalogSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1563122108FC9700427D7F /* CatalogSB.storyboard */; };
 		DB156316210A4F7400427D7F /* CatalogTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156315210A4F7400427D7F /* CatalogTableVC.swift */; };
 		DB156318210A4F9000427D7F /* UserDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156317210A4F9000427D7F /* UserDataVC.swift */; };
-		DB15631A210A4FD600427D7F /* StoreTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156319210A4FD600427D7F /* StoreTabVC.swift */; };
+		DB15631A210A4FD600427D7F /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156319210A4FD600427D7F /* TabBarVC.swift */; };
 		DB15631C210A54D200427D7F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15631B210A54D200427D7F /* AuthViewModel.swift */; };
 		DB156320210A636F00427D7F /* StoreSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB15631F210A636F00427D7F /* StoreSB.storyboard */; };
 		DB156322210A650000427D7F /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156321210A650000427D7F /* CatalogViewModel.swift */; };
@@ -25,6 +25,36 @@
 		DB15632C210A740800427D7F /* EditUserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15632B210A740800427D7F /* EditUserDataViewModel.swift */; };
 		DB15632E210A74FB00427D7F /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15632D210A74FB00427D7F /* RegisterVC.swift */; };
 		DB156330210A750700427D7F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15632F210A750700427D7F /* RegisterViewModel.swift */; };
+		DB156332210DF57B00427D7F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156331210DF57B00427D7F /* AppCoordinator.swift */; };
+		DB156336210E112700427D7F /* LinkingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156335210E112700427D7F /* LinkingOptions.swift */; };
+		DB156338210E138F00427D7F /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156337210E138F00427D7F /* CoordinatorFactory.swift */; };
+		DB15633B210E145000427D7F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15633A210E145000427D7F /* Coordinator.swift */; };
+		DB15633D210E177700427D7F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15633C210E177700427D7F /* BaseView.swift */; };
+		DB15633F210E178300427D7F /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15633E210E178300427D7F /* Presentable.swift */; };
+		DB156342210E184A00427D7F /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156341210E184A00427D7F /* AuthCoordinator.swift */; };
+		DB156344210E186100427D7F /* AuthCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156343210E186100427D7F /* AuthCoordinatorOutput.swift */; };
+		DB156347210E1A6600427D7F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156346210E1A6600427D7F /* Router.swift */; };
+		DB156349210E1A7F00427D7F /* RouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156348210E1A7F00427D7F /* RouterImp.swift */; };
+		DB15634C210E1BD300427D7F /* CatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15634B210E1BD300427D7F /* CatalogController.swift */; };
+		DB15634F210E1BF500427D7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15634E210E1BF500427D7F /* SettingsView.swift */; };
+		DB156352210E1C8400427D7F /* AuthModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156351210E1C8400427D7F /* AuthModuleFactory.swift */; };
+		DB156354210E1C9500427D7F /* SettingsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156353210E1C9500427D7F /* SettingsModuleFactory.swift */; };
+		DB156356210E1CAA00427D7F /* CatalogModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156355210E1CAA00427D7F /* CatalogModuleFactory.swift */; };
+		DB156358210E210F00427D7F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156357210E210F00427D7F /* AuthView.swift */; };
+		DB15635A210E211D00427D7F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156359210E211D00427D7F /* RegisterView.swift */; };
+		DB15635C210E266B00427D7F /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15635B210E266B00427D7F /* CatalogView.swift */; };
+		DB15635E210E308400427D7F /* ModuleFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15635D210E308400427D7F /* ModuleFactoryImp.swift */; };
+		DB156360210E3ECD00427D7F /* StoryBoardsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15635F210E3ECD00427D7F /* StoryBoardsEnum.swift */; };
+		DB156364210E3F7C00427D7F /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156363210E3F7C00427D7F /* UIViewControllerExtensions.swift */; };
+		DB156366210E3FB900427D7F /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156365210E3FB900427D7F /* NSObjectExtension.swift */; };
+		DB156368210E40B800427D7F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156367210E40B800427D7F /* BaseCoordinator.swift */; };
+		DB15636B210E427700427D7F /* CoordinatorFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15636A210E427700427D7F /* CoordinatorFactoryImp.swift */; };
+		DB15636E210E46C500427D7F /* TabBarCoodnator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15636D210E46C500427D7F /* TabBarCoodnator.swift */; };
+		DB156370210E471A00427D7F /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15636F210E471A00427D7F /* TabBarView.swift */; };
+		DB156372210E475800427D7F /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB156371210E475800427D7F /* SettingsCoordinator.swift */; };
+		DB156375210F7F5F00427D7F /* MainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB156374210F7F5F00427D7F /* MainSB.storyboard */; };
+		DB15637B2110096800427D7F /* DetaiItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15637A2110096800427D7F /* DetaiItemView.swift */; };
+		DB15637D2110102600427D7F /* DetailItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15637C2110102600427D7F /* DetailItemVC.swift */; };
 		DB3E3E7D20FCF3DA0063697F /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E7C20FCF3DA0063697F /* BasketRequestFactory.swift */; };
 		DB3E3E7F20FCF3EA0063697F /* BasketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E7E20FCF3EA0063697F /* BasketService.swift */; };
 		DB3E3E8120FCF3F50063697F /* BasketRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E3E8020FCF3F50063697F /* BasketRouters.swift */; };
@@ -116,7 +146,7 @@
 		DB1563122108FC9700427D7F /* CatalogSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CatalogSB.storyboard; sourceTree = "<group>"; };
 		DB156315210A4F7400427D7F /* CatalogTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableVC.swift; sourceTree = "<group>"; };
 		DB156317210A4F9000427D7F /* UserDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataVC.swift; sourceTree = "<group>"; };
-		DB156319210A4FD600427D7F /* StoreTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTabVC.swift; sourceTree = "<group>"; };
+		DB156319210A4FD600427D7F /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		DB15631B210A54D200427D7F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		DB15631F210A636F00427D7F /* StoreSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreSB.storyboard; sourceTree = "<group>"; };
 		DB156321210A650000427D7F /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
@@ -126,6 +156,36 @@
 		DB15632B210A740800427D7F /* EditUserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDataViewModel.swift; sourceTree = "<group>"; };
 		DB15632D210A74FB00427D7F /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		DB15632F210A750700427D7F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		DB156331210DF57B00427D7F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DB156335210E112700427D7F /* LinkingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkingOptions.swift; sourceTree = "<group>"; };
+		DB156337210E138F00427D7F /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		DB15633A210E145000427D7F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DB15633C210E177700427D7F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		DB15633E210E178300427D7F /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		DB156341210E184A00427D7F /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		DB156343210E186100427D7F /* AuthCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorOutput.swift; sourceTree = "<group>"; };
+		DB156346210E1A6600427D7F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DB156348210E1A7F00427D7F /* RouterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
+		DB15634B210E1BD300427D7F /* CatalogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogController.swift; sourceTree = "<group>"; };
+		DB15634E210E1BF500427D7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DB156351210E1C8400427D7F /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
+		DB156353210E1C9500427D7F /* SettingsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleFactory.swift; sourceTree = "<group>"; };
+		DB156355210E1CAA00427D7F /* CatalogModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModuleFactory.swift; sourceTree = "<group>"; };
+		DB156357210E210F00427D7F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		DB156359210E211D00427D7F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		DB15635B210E266B00427D7F /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		DB15635D210E308400427D7F /* ModuleFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryImp.swift; sourceTree = "<group>"; };
+		DB15635F210E3ECD00427D7F /* StoryBoardsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardsEnum.swift; sourceTree = "<group>"; };
+		DB156363210E3F7C00427D7F /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		DB156365210E3FB900427D7F /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		DB156367210E40B800427D7F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		DB15636A210E427700427D7F /* CoordinatorFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryImp.swift; sourceTree = "<group>"; };
+		DB15636D210E46C500427D7F /* TabBarCoodnator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoodnator.swift; sourceTree = "<group>"; };
+		DB15636F210E471A00427D7F /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		DB156371210E475800427D7F /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		DB156374210F7F5F00427D7F /* MainSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainSB.storyboard; sourceTree = "<group>"; };
+		DB15637A2110096800427D7F /* DetaiItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaiItemView.swift; sourceTree = "<group>"; };
+		DB15637C2110102600427D7F /* DetailItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemVC.swift; sourceTree = "<group>"; };
 		DB3E3E7C20FCF3DA0063697F /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
 		DB3E3E7E20FCF3EA0063697F /* BasketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketService.swift; sourceTree = "<group>"; };
 		DB3E3E8020FCF3F50063697F /* BasketRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRouters.swift; sourceTree = "<group>"; };
@@ -236,31 +296,27 @@
 		DB15630C2108F77100427D7F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				DBB3F958210386190062F41C /* AuthVC.swift */,
-				DB15631B210A54D200427D7F /* AuthViewModel.swift */,
-				DB15632D210A74FB00427D7F /* RegisterVC.swift */,
-				DB15632F210A750700427D7F /* RegisterViewModel.swift */,
+				DB156341210E184A00427D7F /* AuthCoordinator.swift */,
+				DB156343210E186100427D7F /* AuthCoordinatorOutput.swift */,
+				DB156340210E183500427D7F /* Controllers */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		DB15630E2108FC0D00427D7F /* UserData */ = {
+		DB15630E2108FC0D00427D7F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				DB156317210A4F9000427D7F /* UserDataVC.swift */,
-				DB156327210A73C800427D7F /* UserDataViewModel.swift */,
-				DB156329210A73FB00427D7F /* EditUserDataVC.swift */,
-				DB15632B210A740800427D7F /* EditUserDataViewModel.swift */,
+				DB156371210E475800427D7F /* SettingsCoordinator.swift */,
+				DB15634D210E1BDA00427D7F /* Controllers */,
 			);
-			path = UserData;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		DB1563112108FC8400427D7F /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				DB156315210A4F7400427D7F /* CatalogTableVC.swift */,
-				DB156321210A650000427D7F /* CatalogViewModel.swift */,
-				DB156325210A6BDE00427D7F /* GoodCell.swift */,
+				DB15634B210E1BD300427D7F /* CatalogController.swift */,
+				DB15634A210E1BBA00427D7F /* Controllers */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -268,20 +324,146 @@
 		DB156314210A4F3F00427D7F /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				DB15635F210E3ECD00427D7F /* StoryBoardsEnum.swift */,
 				DB15630F2108FC3700427D7F /* UserDataSB.storyboard */,
 				DB15630A2108F74800427D7F /* AuthSB.storyboard */,
 				DB1563122108FC9700427D7F /* CatalogSB.storyboard */,
 				DB15631F210A636F00427D7F /* StoreSB.storyboard */,
+				DB156374210F7F5F00427D7F /* MainSB.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
-		DB15631E210A634A00427D7F /* Store */ = {
+		DB15631E210A634A00427D7F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				DB156319210A4FD600427D7F /* StoreTabVC.swift */,
+				DB15636D210E46C500427D7F /* TabBarCoodnator.swift */,
+				DB156373210E476C00427D7F /* Controllers */,
 			);
-			path = Store;
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		DB156334210E10CA00427D7F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DB156350210E1C6F00427D7F /* Factories */,
+				DB156339210E144500427D7F /* Protocols */,
+				DB156335210E112700427D7F /* LinkingOptions.swift */,
+				DB156367210E40B800427D7F /* BaseCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DB156339210E144500427D7F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DB15633A210E145000427D7F /* Coordinator.swift */,
+				DB15633C210E177700427D7F /* BaseView.swift */,
+				DB15633E210E178300427D7F /* Presentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DB156340210E183500427D7F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB156357210E210F00427D7F /* AuthView.swift */,
+				DBB3F958210386190062F41C /* AuthVC.swift */,
+				DB15631B210A54D200427D7F /* AuthViewModel.swift */,
+				DB156359210E211D00427D7F /* RegisterView.swift */,
+				DB15632D210A74FB00427D7F /* RegisterVC.swift */,
+				DB15632F210A750700427D7F /* RegisterViewModel.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB156345210E1A5800427D7F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DB156346210E1A6600427D7F /* Router.swift */,
+				DB156348210E1A7F00427D7F /* RouterImp.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DB15634A210E1BBA00427D7F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB1563792110094E00427D7F /* DetailView */,
+				DB1563782110094600427D7F /* Catalog */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB15634D210E1BDA00427D7F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB15634E210E1BF500427D7F /* SettingsView.swift */,
+				DB156317210A4F9000427D7F /* UserDataVC.swift */,
+				DB156327210A73C800427D7F /* UserDataViewModel.swift */,
+				DB156329210A73FB00427D7F /* EditUserDataVC.swift */,
+				DB15632B210A740800427D7F /* EditUserDataViewModel.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB156350210E1C6F00427D7F /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				DB156369210E424100427D7F /* Implementations */,
+				DB156351210E1C8400427D7F /* AuthModuleFactory.swift */,
+				DB156353210E1C9500427D7F /* SettingsModuleFactory.swift */,
+				DB156355210E1CAA00427D7F /* CatalogModuleFactory.swift */,
+				DB156337210E138F00427D7F /* CoordinatorFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		DB156362210E3F5900427D7F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB156363210E3F7C00427D7F /* UIViewControllerExtensions.swift */,
+				DB156365210E3FB900427D7F /* NSObjectExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB156369210E424100427D7F /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				DB15635D210E308400427D7F /* ModuleFactoryImp.swift */,
+				DB15636A210E427700427D7F /* CoordinatorFactoryImp.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		DB156373210E476C00427D7F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB15636F210E471A00427D7F /* TabBarView.swift */,
+				DB156319210A4FD600427D7F /* TabBarVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB1563782110094600427D7F /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				DB15635B210E266B00427D7F /* CatalogView.swift */,
+				DB156315210A4F7400427D7F /* CatalogTableVC.swift */,
+				DB156321210A650000427D7F /* CatalogViewModel.swift */,
+				DB156325210A6BDE00427D7F /* GoodCell.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		DB1563792110094E00427D7F /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				DB15637A2110096800427D7F /* DetaiItemView.swift */,
+				DB15637C2110102600427D7F /* DetailItemVC.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		DB3E3E7B20FCF3BA0063697F /* Basket */ = {
@@ -439,6 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB5EA7A20EABEBC004A8D6B /* AppDelegate.swift */,
+				DB156331210DF57B00427D7F /* AppCoordinator.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -596,10 +779,13 @@
 		DBB5EAAB20EABF21004A8D6B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				DB15631E210A634A00427D7F /* Store */,
+				DB156362210E3F5900427D7F /* Extensions */,
+				DB156345210E1A5800427D7F /* Router */,
+				DB156334210E10CA00427D7F /* Coordinator */,
 				DB156314210A4F3F00427D7F /* StoryBoards */,
+				DB15631E210A634A00427D7F /* TabBar */,
 				DB1563112108FC8400427D7F /* Catalog */,
-				DB15630E2108FC0D00427D7F /* UserData */,
+				DB15630E2108FC0D00427D7F /* Settings */,
 				DB15630C2108F77100427D7F /* Auth */,
 			);
 			path = Flows;
@@ -759,6 +945,7 @@
 				DBB3F94021011F270062F41C /* addToBasket.json in Resources */,
 				DB1563102108FC3700427D7F /* UserDataSB.storyboard in Resources */,
 				DBB5EA8520EABEBD004A8D6B /* LaunchScreen.storyboard in Resources */,
+				DB156375210F7F5F00427D7F /* MainSB.storyboard in Resources */,
 				DBB3F94821011F920062F41C /* deleteFromBasket.json in Resources */,
 				DBB3F952210120090062F41C /* removeReview.json in Resources */,
 				DBB3F94A21011FA60062F41C /* getBasket.json in Resources */,
@@ -871,8 +1058,11 @@
 			files = (
 				DB4BFAD420F2401500298E68 /* RegisterResult.swift in Sources */,
 				DBCBEDC020EEA52900C7AC1D /* ResponseDecodable.swift in Sources */,
+				DB15635C210E266B00427D7F /* CatalogView.swift in Sources */,
 				DBF55E5320F681BC0049DDFC /* GBShopSessionNamager.swift in Sources */,
+				DB15633D210E177700427D7F /* BaseView.swift in Sources */,
 				DB3E3E8120FCF3F50063697F /* BasketRouters.swift in Sources */,
+				DB156354210E1C9500427D7F /* SettingsModuleFactory.swift in Sources */,
 				DB547AC120F1394600112CBE /* LoginResult.swift in Sources */,
 				DB5EB4B820F3E0FA0044543B /* UserDataRouters.swift in Sources */,
 				DBB3F959210386190062F41C /* AuthVC.swift in Sources */,
@@ -882,37 +1072,63 @@
 				DB5EB4B620F3DC8E0044543B /* CatalogRouters.swift in Sources */,
 				DB3E3E8C20FD0E620063697F /* RemoveReviewResult.swift in Sources */,
 				DB3E3E7D20FCF3DA0063697F /* BasketRequestFactory.swift in Sources */,
+				DB156368210E40B800427D7F /* BaseCoordinator.swift in Sources */,
+				DB15634F210E1BF500427D7F /* SettingsView.swift in Sources */,
+				DB15636B210E427700427D7F /* CoordinatorFactoryImp.swift in Sources */,
 				DB15631C210A54D200427D7F /* AuthViewModel.swift in Sources */,
 				DBB5EA7B20EABEBC004A8D6B /* AppDelegate.swift in Sources */,
+				DB156356210E1CAA00427D7F /* CatalogModuleFactory.swift in Sources */,
 				DB547AC320F1394E00112CBE /* User.swift in Sources */,
+				DB156360210E3ECD00427D7F /* StoryBoardsEnum.swift in Sources */,
+				DB156332210DF57B00427D7F /* AppCoordinator.swift in Sources */,
+				DB15637B2110096800427D7F /* DetaiItemView.swift in Sources */,
 				DB4BFAAA20F13F9700298E68 /* AuthRequestsFactory.swift in Sources */,
 				DBCBEDBE20EEA32100C7AC1D /* ErrorParser.swift in Sources */,
 				DB3E3E7F20FCF3EA0063697F /* BasketService.swift in Sources */,
 				DB5EB4AF20F3DA8D0044543B /* AuthRouters.swift in Sources */,
+				DB156347210E1A6600427D7F /* Router.swift in Sources */,
 				DB156318210A4F9000427D7F /* UserDataVC.swift in Sources */,
+				DB15633B210E145000427D7F /* Coordinator.swift in Sources */,
+				DB156349210E1A7F00427D7F /* RouterImp.swift in Sources */,
 				DB156316210A4F7400427D7F /* CatalogTableVC.swift in Sources */,
+				DB156370210E471A00427D7F /* TabBarView.swift in Sources */,
 				DB547ABE20F1320C00112CBE /* GenericRequest.swift in Sources */,
 				DBCBEDBC20EEA26600C7AC1D /* AbstractErrorParser.swift in Sources */,
+				DB156352210E1C8400427D7F /* AuthModuleFactory.swift in Sources */,
+				DB156366210E3FB900427D7F /* NSObjectExtension.swift in Sources */,
+				DB15637D2110102600427D7F /* DetailItemVC.swift in Sources */,
 				DB15632E210A74FB00427D7F /* RegisterVC.swift in Sources */,
 				DB5EB4B420F3DC7C0044543B /* CatalogService.swift in Sources */,
 				DB4BFAD620F2404000298E68 /* LogOutResult.swift in Sources */,
 				DB4BFAAC20F1420600298E68 /* AuthService.swift in Sources */,
-				DB15631A210A4FD600427D7F /* StoreTabVC.swift in Sources */,
+				DB15631A210A4FD600427D7F /* TabBarVC.swift in Sources */,
+				DB156372210E475800427D7F /* SettingsCoordinator.swift in Sources */,
 				DB5EB4B220F3DC640044543B /* CatalogRequestsFactory.swift in Sources */,
 				DB80981920F2996800F96EAE /* GBShopServicesFactory.swift in Sources */,
+				DB156342210E184A00427D7F /* AuthCoordinator.swift in Sources */,
 				DB3E3E9220FD0EA70063697F /* GetContentsResult.swift in Sources */,
 				DB3E3E8E20FD0E8E0063697F /* AddToBasketResult.swift in Sources */,
+				DB15636E210E46C500427D7F /* TabBarCoodnator.swift in Sources */,
+				DB15634C210E1BD300427D7F /* CatalogController.swift in Sources */,
 				DBF55E5520F7CF220049DDFC /* GetGoodResult.swift in Sources */,
+				DB15635A210E211D00427D7F /* RegisterView.swift in Sources */,
 				DB4BFAB520F1EA9600298E68 /* UserDataRequestsFactory.swift in Sources */,
 				DB3E3E8A20FD0E570063697F /* ApproveReviewResult.swift in Sources */,
+				DB15635E210E308400427D7F /* ModuleFactoryImp.swift in Sources */,
 				DB4BFAB920F1EAD600298E68 /* UserDataService.swift in Sources */,
+				DB156358210E210F00427D7F /* AuthView.swift in Sources */,
 				DB156328210A73C800427D7F /* UserDataViewModel.swift in Sources */,
+				DB156364210E3F7C00427D7F /* UIViewControllerExtensions.swift in Sources */,
+				DB156336210E112700427D7F /* LinkingOptions.swift in Sources */,
 				DB15632C210A740800427D7F /* EditUserDataViewModel.swift in Sources */,
 				DB5EB4BA20F44EC30044543B /* GoodOnPageResult.swift in Sources */,
 				DB156326210A6BDE00427D7F /* GoodCell.swift in Sources */,
 				DB3E3E9020FD0E9A0063697F /* RemoveFromBasketResult.swift in Sources */,
+				DB156338210E138F00427D7F /* CoordinatorFactory.swift in Sources */,
 				DB4BFAD220F2400400298E68 /* ChangeUserDataResult.swift in Sources */,
+				DB156344210E186100427D7F /* AuthCoordinatorOutput.swift in Sources */,
 				DB4BFADA20F2432A00298E68 /* UserInfo.swift in Sources */,
+				DB15633F210E178300427D7F /* Presentable.swift in Sources */,
 				DB3E3E8720FD0E2F0063697F /* AddReviewResult.swift in Sources */,
 				DB156330210A750700427D7F /* RegisterViewModel.swift in Sources */,
 			);

@@ -4,7 +4,7 @@ class AuthViewModel {
     var authService: AuthRequestsFactory
     
     init() {
-        authService = GBShopServicesFactory().makeAuthRequestFactory()
+        authService = GBShopServicesFactory.instance().makeAuthRequestFactory()
     }
     
     func login(userName: String,

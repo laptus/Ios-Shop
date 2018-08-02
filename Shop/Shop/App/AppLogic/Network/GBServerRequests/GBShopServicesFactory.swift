@@ -5,6 +5,16 @@ typealias RequestVoidCompletion<T> = (DataResponse<T>) -> Void
 
 /// fabric of gbShop services
 class GBShopServicesFactory {
+    static var shopServicesFactory: GBShopServicesFactory?
+    
+    static func instance() -> GBShopServicesFactory {
+        if let factory = shopServicesFactory {
+            return factory
+        } else {
+            shopServicesFactory = GBShopServicesFactory.init()
+            return shopServicesFactory!
+        }
+    }
     
     private func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()

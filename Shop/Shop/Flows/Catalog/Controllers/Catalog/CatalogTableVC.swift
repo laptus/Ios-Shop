@@ -1,14 +1,8 @@
-//
-//  CatalogTableVCTableViewController.swift
-//  Shop
-//
-//  Created by Laptev Sasha on 26/07/2018.
-//  Copyright © 2018 Laptev Sasha. All rights reserved.
-//
-
 import UIKit
 
-class CatalogTableVC: UIViewController {
+class CatalogTableVC: UIViewController, CatalogView {
+    var onItemSelected: ((GoodOnPageResult) -> Void)?
+        
     
     @IBOutlet weak var goodsTable: UITableView!
     var catalogViewModel: CatalogViewModel?
