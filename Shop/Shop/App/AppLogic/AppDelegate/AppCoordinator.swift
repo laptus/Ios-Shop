@@ -1,6 +1,6 @@
 import Foundation
 
-fileprivate var isAuthorized: Bool = false
+fileprivate var isAuthorized: Bool = true
 
 fileprivate enum LaunchInstructor {
     case main, auth
@@ -28,7 +28,7 @@ final class AppCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        if isAuthorized{
+        if isAuthorized {
             runMainFlow()
         } else {
             runAuthFlow()
@@ -52,5 +52,8 @@ final class AppCoordinator: BaseCoordinator {
         addDependency(coordinator)
         coordinator.start()
     }
+    
+    deinit {
+        
+    }
 }
-
