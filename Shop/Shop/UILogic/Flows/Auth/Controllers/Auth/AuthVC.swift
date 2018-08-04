@@ -11,7 +11,6 @@ class AuthVC: UIViewController, AuthView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = AuthViewModel()
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyBoardWasShown),
                                                name: NSNotification.Name.UIKeyboardWillShow,

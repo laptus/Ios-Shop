@@ -1,6 +1,7 @@
 import UIKit
 
 class CoordinatorFactoryImp: CoordinatorFactory {
+
     
     func makeItemCoordinator(navController: UINavigationController) -> Coordinator {
         let coordinator = CatalogCoordinator(catalogFactory: ModuleFactoryImp(),
@@ -15,7 +16,7 @@ class CoordinatorFactoryImp: CoordinatorFactory {
         return controller
     }
     
-    func makeTabbarCoordinator() -> (configurator: Coordinator, toPresent: Presentable?) {
+    func makeTabbarCoordinator() -> (configurator: TabBarCoordinator, toPresent: Presentable?) {
         let controller = TabbarVC.controllerFromStoryboard(.tabBar)
         let coordinator = TabBarCoordinator(tabbarView: controller,
                                             coordinatorFactory: CoordinatorFactoryImp())

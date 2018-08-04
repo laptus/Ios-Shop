@@ -3,6 +3,7 @@ import UIKit
 class TabBarCoordinator: BaseCoordinator {
     private let tabbarView: TabBarView
     private let coordinatorFactory: CoordinatorFactory
+    var onLogOutAuth: (() -> Void)?
     
     init(tabbarView: TabBarView, coordinatorFactory: CoordinatorFactory) {
         self.tabbarView = tabbarView
@@ -14,6 +15,7 @@ class TabBarCoordinator: BaseCoordinator {
         tabbarView.onItemFlowSelect = runItemFlow()
         tabbarView.onSettingsFlowSelect = runSettingsFlow()
          tabbarView.onBasketFlowSelect = runBasketFlow()
+        tabbarView.onExit = onLogOutAuth
     }
     
     private func runCatalogFlow() -> ((UINavigationController) -> Void) {

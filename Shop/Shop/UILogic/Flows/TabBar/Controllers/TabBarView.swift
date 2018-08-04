@@ -5,4 +5,5 @@ protocol TabBarView: BaseView {
     var onSettingsFlowSelect: ((UINavigationController) -> Void)? { get set }
     var onBasketFlowSelect: ((UINavigationController) -> Void)? { get set }
     var onViewDidLoad: ((UINavigationController) -> Void)? { get set }
+    var onExit: (() -> Void)? { get set }
 }

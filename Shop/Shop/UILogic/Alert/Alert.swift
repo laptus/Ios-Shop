@@ -127,6 +127,23 @@ struct Alert {
                             message: "Can't register")
     }
     
+    static func showChangeInfoError(for vc: UIViewController,
+                                    error: Errors) {
+        
+        switch error.type {
+        case .cantConnect:
+            showServerError(for: vc)
+        case .wrongRequest:
+            showChangeInfoError(for: vc)
+        default:
+            return
+        }
+    }
+    
+    private static func showChangeInfoError(for vc: UIViewController) {
+        showAlert(for: vc, title: "Error",
+                  message: "Can't changeInfo")
+    }
     
     private static func showAlertWithAction(for vc: UIViewController,
                                             title: String,

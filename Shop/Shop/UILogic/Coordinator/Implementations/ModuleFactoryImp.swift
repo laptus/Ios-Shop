@@ -1,26 +1,35 @@
 final class ModuleFactoryImp: AuthModuleFactory, CatalogModuleFactory, SettingsModuleFactory, BasketModuleFactory {
     func makeDetailItemView(for goodId: Int) -> DetailItemView {
         let view = DetailItemVC.controllerFromStoryboard(.catalog)
+        view.service = DetailViewModel()
         view.goodId = goodId
         return view
     }
     
     
     func makeSettings() -> SettingsView {
-        return UserDataVC.controllerFromStoryboard(.settings)
+        let view = UserDataVC.controllerFromStoryboard(.settings)
+        view.viewModel = SettingsViewModel()
+        return view
     }
     
     
     func makeAuth() -> AuthView {
-        return AuthVC.controllerFromStoryboard(.auth)
+        let view = AuthVC.controllerFromStoryboard(.auth)
+        view.viewModel = AuthViewModel()
+        return view
     }
     
     func makeItemsOutput() -> CatalogView {
-        return CatalogTableVC.controllerFromStoryboard(.catalog)
+        let view = CatalogTableVC.controllerFromStoryboard(.catalog)
+        view.catalogViewModel = CatalogViewModel()
+        return view
     }
     
     func makeSettings() -> UserDataVC {
-        return UserDataVC.controllerFromStoryboard(.settings)
+        let view = UserDataVC.controllerFromStoryboard(.settings)
+        view.viewModel = SettingsViewModel()
+        return view
     }
     
     func makeBasket() -> BasketTableVC {

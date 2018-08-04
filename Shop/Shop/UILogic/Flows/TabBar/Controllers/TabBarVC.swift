@@ -1,7 +1,7 @@
 import UIKit
 
 class TabbarVC: UITabBarController, UITabBarControllerDelegate, TabBarView {
-    
+    var onExit: (() -> Void)?
     var onBasketFlowSelect: ((UINavigationController) -> Void)?
     var onItemFlowSelect: ((UINavigationController) -> Void)?
     var onSettingsFlowSelect: ((UINavigationController) -> Void)?
@@ -30,6 +30,8 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate, TabBarView {
             onSettingsFlowSelect?(controller)
         } else if selectedIndex == 2 {
             onBasketFlowSelect?(controller)
+        } else if selectedIndex == 3 {
+            onExit?()
         }
     }
 }

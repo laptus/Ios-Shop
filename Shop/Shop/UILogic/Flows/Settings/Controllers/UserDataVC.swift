@@ -1,6 +1,7 @@
 import UIKit
 
 class UserDataVC: UIViewController, SettingsView {
+    
     @IBOutlet weak var gender: UITextField!
     @IBOutlet weak var creditCard: UITextField!
     @IBOutlet weak var bio: UITextField!
@@ -8,7 +9,9 @@ class UserDataVC: UIViewController, SettingsView {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var editButton: UIButton!
-
+    
+    var viewModel: SettingsViewModel?
+    
     @IBAction func changeUserData(_ sender: Any) {
         if isEditable {
             changeData()
@@ -23,7 +26,7 @@ class UserDataVC: UIViewController, SettingsView {
                                                 message: "Really change?",
                                                 preferredStyle: UIAlertControllerStyle.alert)
         let okActionction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: {[weak self] _ in
-
+           
             self?.editButton.setTitle("Change", for: UIControlState.normal)
         })
         let cancelAction = UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: {[weak self] _ in
@@ -34,10 +37,6 @@ class UserDataVC: UIViewController, SettingsView {
         alertController.addAction(okActionction)
         alertController.addAction(cancelAction)
         self.present(alertController, animated: false)
-    }
-    
-    @IBAction func logOut(_ sender: Any) {
-        
     }
     
     var isEditable: Bool = false {
@@ -59,6 +58,41 @@ class UserDataVC: UIViewController, SettingsView {
     }
     
     func changeUserData() {
-        
+        if let id = (UserDefaults.standard.value(forKey: "user") as? UserInfo)?.id,
+            let name = nameField.text,
+            let pass = password.text,
+            let eMail = email.text,
+            let bioText = bio.text,
+            let card = creditCard.text,
+            let genderText = gender.text {
+            
+            let user = UserInfo(id: id,
+                                name: name,
+                                password: pass,
+                                eMail: eMail,
+                                bio: bioText,
+                                creditcard: card,
+                                gender: genderText)
+            viewModel?.changeInfo(userInfo: user, completionHandler: {[weak self] recievedError, success in
+                if let error = recievedError,
+                    let vc = self {
+                    Alert.showRegisterError(for: vc, error: error)
+                } else {
+                    if !success {
+                        self?.setUser()
+                    }
+                }
+            })
+        }
+    }
+    
+    func setUser() {
+        guard let currentUser = (UserDefaults.standard.value(forKey: "user") as? UserInfo) else { return }
+        nameField.text = currentUser.name
+        password.text = currentUser.password
+        email.text = currentUser.eMail
+        bio.text = currentUser.bio
+        creditCard.text = currentUser.creditcard
+        gender.text = currentUser.gender
     }
 }

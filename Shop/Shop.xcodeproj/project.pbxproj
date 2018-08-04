@@ -428,10 +428,10 @@
 		DB156350210E1C6F00427D7F /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				DB156337210E138F00427D7F /* CoordinatorFactory.swift */,
 				DB156351210E1C8400427D7F /* AuthModuleFactory.swift */,
 				DB156353210E1C9500427D7F /* SettingsModuleFactory.swift */,
 				DB156355210E1CAA00427D7F /* CatalogModuleFactory.swift */,
-				DB156337210E138F00427D7F /* CoordinatorFactory.swift */,
 				DB6EA462211490AF00E269FD /* BasketModuleFactory.swift */,
 			);
 			path = Factories;

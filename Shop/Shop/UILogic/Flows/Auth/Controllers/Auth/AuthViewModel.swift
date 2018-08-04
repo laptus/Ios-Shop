@@ -13,6 +13,14 @@ class AuthViewModel: Analytics {
         authService.login(username: userName, password: password, completionHandler: {[weak self] dataResult in
             switch dataResult.result {
             case .success:
+                let userResult = (dataResult.value as! LoginResult).user
+                let info = UserInfo(id: userResult.id,
+                                    name: userResult.name,
+                                    password: password,
+                                    eMail: "",
+                                    bio: "",
+                                    creditcard: "",
+                                    gender: "")
                 completionHandler(nil)
                 self?.track(AnalyticsEvent.login(method: AnalyticsEvent.LoginMethod.password, success: true))
             case .failure(let error):

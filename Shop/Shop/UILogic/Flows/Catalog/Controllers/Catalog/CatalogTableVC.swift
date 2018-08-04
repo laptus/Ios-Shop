@@ -9,7 +9,6 @@ class CatalogTableVC: UIViewController, CatalogView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        catalogViewModel = CatalogViewModel()
         catalogViewModel?.onItemSelected = onItemSelected
         goodsTable.delegate = catalogViewModel
         goodsTable.dataSource = catalogViewModel

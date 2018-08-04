@@ -7,18 +7,17 @@ class DetailItemVC: UIViewController, DetailItemView {
     @IBOutlet weak var goodDescription: UILabel!
     
     var goodId: Int?
-    var service: DetailViewModel = DetailViewModel()
+    var service: DetailViewModel?
     var goodInfo: GetGoodResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let id = goodId {
-            service.getGoodInfo(for: id, completionHandler: {[weak self] (recievedGoodInfo, recievedError) in
+            service?.getGoodInfo(for: id, completionHandler: {[weak self] (recievedGoodInfo, recievedError) in
                 if let error = recievedError,
                     let vc = self {
                     Alert.showGoodError(for: vc, error: error)
-                    
                 } else if let good = recievedGoodInfo {
                     self?.goodInfo = good
                     DispatchQueue.main.async {
