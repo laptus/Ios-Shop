@@ -1,3 +1,3 @@
 protocol CatalogView: BaseView {
-    var onItemSelected: ((Int) -> Void)? {get set}
+    var onItemSelected: ((Int) -> Void)? { get set }
 }

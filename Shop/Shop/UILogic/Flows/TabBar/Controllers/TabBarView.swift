@@ -1,8 +1,8 @@
 import UIKit
 
 protocol TabBarView: BaseView {
-    var onItemFlowSelect: ((UINavigationController) -> ())? { get set }
-    var onSettingsFlowSelect: ((UINavigationController) -> ())? { get set }
-    var onBasketFlowSelect: ((UINavigationController) -> ())? { get set }
-    var onViewDidLoad: ((UINavigationController) -> ())? { get set }
+    var onItemFlowSelect: ((UINavigationController) -> Void)? { get set }
+    var onSettingsFlowSelect: ((UINavigationController) -> Void)? { get set }
+    var onBasketFlowSelect: ((UINavigationController) -> Void)? { get set }
+    var onViewDidLoad: ((UINavigationController) -> Void)? { get set }
 }

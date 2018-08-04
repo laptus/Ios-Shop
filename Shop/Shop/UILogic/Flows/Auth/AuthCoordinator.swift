@@ -13,10 +13,8 @@ final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
         showLogin()
     }
     
-    // MARK: Run current flow's controllers
-    
     private func showLogin() {
-        var auth = factory.makeAuth()
+        let auth = factory.makeAuth()
         auth.onCompleteAuth = { [weak self] in
             self?.finishFlow?()
         }

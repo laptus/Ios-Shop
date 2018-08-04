@@ -16,7 +16,7 @@ class TabBarCoordinator: BaseCoordinator {
          tabbarView.onBasketFlowSelect = runBasketFlow()
     }
     
-    private func runCatalogFlow() -> ((UINavigationController) -> ()) {
+    private func runCatalogFlow() -> ((UINavigationController) -> Void) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
                 let catalogCoordinator = self.coordinatorFactory.makeCatalogCoordinator(navController: navController)
@@ -26,7 +26,7 @@ class TabBarCoordinator: BaseCoordinator {
         }
     }
     
-    private func runSettingsFlow() -> ((UINavigationController) -> ()) {
+    private func runSettingsFlow() -> ((UINavigationController) -> Void) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
                 let settingsCoordinator = self.coordinatorFactory.makeSettingsCoordinator(navController: navController)
@@ -36,7 +36,7 @@ class TabBarCoordinator: BaseCoordinator {
         }
     }
     
-    private func runItemFlow() -> ((UINavigationController) -> ()) {
+    private func runItemFlow() -> ((UINavigationController) -> Void) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
                 let catalogCoordinator = self.coordinatorFactory.makeItemCoordinator(navController: navController)
@@ -46,7 +46,7 @@ class TabBarCoordinator: BaseCoordinator {
         }
     }
     
-    private func runBasketFlow() -> ((UINavigationController) -> ()) {
+    private func runBasketFlow() -> ((UINavigationController) -> Void) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
                 let basketCoordinator = self.coordinatorFactory.makeBasketCoordinator(navController: navController)

@@ -13,6 +13,7 @@ extension BasketService: BasketRequestsFactory {
              completionHandler: @escaping RequestVoidCompletion<AddToBasketResult>) {
         
         let requestModel = AddToBasketRouter(baseURL: baseUrl, idPorduct: idProduct, quantity: quantity)
+        
         self.request(reques: requestModel, completionHandler: completionHandler)
     }
     

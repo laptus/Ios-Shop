@@ -1,9 +1,6 @@
 import UIKit
 
 class UserDataVC: UIViewController, SettingsView {
-    var onDataChanged: (() -> Void)?
-    
-
     @IBOutlet weak var gender: UITextField!
     @IBOutlet weak var creditCard: UITextField!
     @IBOutlet weak var bio: UITextField!
@@ -11,9 +8,7 @@ class UserDataVC: UIViewController, SettingsView {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var editButton: UIButton!
-    
-    var serverService: UserDataService?
-    
+
     @IBAction func changeUserData(_ sender: Any) {
         if isEditable {
             changeData()
@@ -28,7 +23,7 @@ class UserDataVC: UIViewController, SettingsView {
                                                 message: "Really change?",
                                                 preferredStyle: UIAlertControllerStyle.alert)
         let okActionction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: {[weak self] _ in
-            
+
             self?.editButton.setTitle("Change", for: UIControlState.normal)
         })
         let cancelAction = UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: {[weak self] _ in
@@ -58,9 +53,9 @@ class UserDataVC: UIViewController, SettingsView {
     
     func changeViewState(isEditable: Bool) {
         self.view.subviews
-            .filter{$0 is UITextField}
-            .map{$0 as! UITextField}
-            .forEach{$0.isEnabled = isEditable}
+            .filter { $0 is UITextField }
+            .map { $0 as! UITextField }
+            .forEach { $0.isEnabled = isEditable }
     }
     
     func changeUserData() {

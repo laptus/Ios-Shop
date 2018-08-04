@@ -13,7 +13,7 @@ class BasketCoordinator: BaseCoordinator {
         showBasket()
     }
     
-    func showBasket(){
+    func showBasket() {
         let itemsView = factory.makeBasket()
         router.push(itemsView)
     }

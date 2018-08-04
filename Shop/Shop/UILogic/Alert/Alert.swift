@@ -2,7 +2,7 @@ import UIKit
 
 struct Alert {
     static func showCatalagError(for vc: UIViewController,
-                                 error: ProjectErrors) {
+                                 error: Errors) {
         
         switch error.type {
         case .cantConnect:
@@ -33,7 +33,7 @@ struct Alert {
     }
     
     static func showGoodError(for vc: UIViewController,
-                              error: ProjectErrors) {
+                              error: Errors) {
         
         switch error.type {
         case .cantConnect:
@@ -52,7 +52,7 @@ struct Alert {
     }
     
     static func showUserInfoError(for vc: UIViewController,
-                                  error: ProjectErrors) {
+                                  error: Errors) {
         
         switch error.type {
         case .cantConnect:
@@ -87,7 +87,7 @@ struct Alert {
     }
     
     static func showLoginError(for vc: UIViewController,
-                               error: ProjectErrors,
+                               error: Errors,
                                actionHandler: ((UIAlertAction) -> Void)?) {
         
         switch error.type {
@@ -110,7 +110,7 @@ struct Alert {
     }
     
     static func showRegisterError(for vc: UIViewController,
-                                  error: ProjectErrors) {
+                                  error: Errors) {
         
         switch error.type {
         case .cantConnect:
@@ -151,4 +151,3 @@ struct Alert {
         }
     }
 }
-

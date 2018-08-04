@@ -18,13 +18,12 @@ class RegisterViewModel {
                 switch dataResult.result {
                 case .success:
                     completionHandler(nil)
-                case .failure( _):
-                    completionHandler(ProjectErrors(type: .wrongRequest))
+                case .failure:
+                    completionHandler(Errors(type: .wrongRequest))
                 }
             })
         } else {
-            completionHandler(ProjectErrors(type: .wrongData))
+            completionHandler(Errors(type: .wrongData))
         }
     }
 }
-

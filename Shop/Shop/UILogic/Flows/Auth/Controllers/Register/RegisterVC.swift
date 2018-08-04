@@ -35,7 +35,7 @@ class RegisterVC: UIViewController, RegisterView {
     
     func register() {
         viewModel?.register(login: login.text, password: password.text, completionHandler: {[weak self] recievedError in
-            if let error = recievedError as? ProjectErrors,
+            if let error = recievedError as? Errors,
                 let vc = self {
                 Alert.showRegisterError(for: vc, error: error)
             }

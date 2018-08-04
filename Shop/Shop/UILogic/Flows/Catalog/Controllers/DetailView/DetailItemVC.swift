@@ -18,6 +18,7 @@ class DetailItemVC: UIViewController, DetailItemView {
                 if let error = recievedError,
                     let vc = self {
                     Alert.showGoodError(for: vc, error: error)
+                    
                 } else if let good = recievedGoodInfo {
                     self?.goodInfo = good
                     DispatchQueue.main.async {

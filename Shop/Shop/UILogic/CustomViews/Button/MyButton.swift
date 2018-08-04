@@ -18,7 +18,7 @@ class MyButton: UIButton {
     
     private func setupButton() {
         setTitleColor(UIColor.blue, for: .normal)
-        backgroundColor     = .white
-        layer.cornerRadius  = frame.size.height/2
+        backgroundColor = .white
+        layer.cornerRadius = frame.size.height / 2
     }
 }

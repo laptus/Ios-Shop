@@ -57,8 +57,8 @@ extension AuthVC {
     
     private func tryToLogin() {
         viewModel?.login(userName: "", password: "", completionHandler: {[weak self] recievedError in
-            if let error = recievedError as? ProjectErrors {
-                guard let vc = self else {return}
+            if let error = recievedError as? Errors {
+                guard let vc = self else { return }
                 Alert.showLoginError(for: vc, error: error, actionHandler: {_ in
                     vc.performSegue(withIdentifier: "toRegister", sender: self)
                     })
@@ -71,17 +71,14 @@ extension AuthVC {
 
 extension AuthVC {
     @objc private func keyBoardWasShown(notification: Notification) {
-        
-        let info = notification.userInfo! as NSDictionary
-        let kbSize = (info.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
-        let contentInsets = UIEdgeInsetsMake(0.0,
-                                             0.0,
-                                             kbSize.height,
-                                             0.0)
-        
-        
-        self.scrollView?.contentInset = contentInsets
-        scrollView?.scrollIndicatorInsets = contentInsets
+        guard
+            let info = notification.userInfo as? NSDictionary,
+            let kbSize = (info.value(forKey: UIKeyboardFrameEndUserInfoKey) as? NSValue)?
+                .cgRectValue.size else { return }
+            
+            let contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0)
+            self.scrollView?.contentInset = contentInsets
+            scrollView?.scrollIndicatorInsets = contentInsets
     }
     
     @objc private func keyboardWillBeHidden(notification: Notification) {
