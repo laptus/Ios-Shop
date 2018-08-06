@@ -21,6 +21,13 @@ class AuthViewModel: Analytics {
                                     bio: "",
                                     creditcard: "",
                                     gender: "")
+                UserDefaults.standard.set(info.id, forKey: "userId")
+                UserDefaults.standard.set(info.name, forKey: "userName")
+                UserDefaults.standard.set(info.password, forKey: "userPassword")
+                UserDefaults.standard.set(info.bio, forKey: "userBio")
+                UserDefaults.standard.set(info.creditcard, forKey: "userCard")
+                UserDefaults.standard.set(info.eMail, forKey: "userMail")
+                UserDefaults.standard.set(info.gender, forKey: "userGender")
                 completionHandler(nil)
                 self?.track(AnalyticsEvent.login(method: AnalyticsEvent.LoginMethod.password, success: true))
             case .failure(let error):

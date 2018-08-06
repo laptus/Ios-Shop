@@ -14,7 +14,7 @@ class RegisterViewModel {
             let password = password {
             userInfo.name = login
             userInfo.password = password
-            registerService.register(user: userInfo, completionHandler: { dataResult in
+            registerService.register(user: userInfo, completionHandler: {[weak self] dataResult in
                 switch dataResult.result {
                 case .success:
                     completionHandler(nil)

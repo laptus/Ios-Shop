@@ -43,6 +43,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hMK-B0-5y5" userLabel="LoginTextField">
                                         <rect key="frame" x="139" y="226" width="97" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="login"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="97" id="lSv-F3-8MY"/>
                                         </constraints>
@@ -52,12 +53,14 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dgy-E6-2Mr" userLabel="PasswordTextField">
                                         <rect key="frame" x="139" y="318" width="97" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="password"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe5-Ta-fkB" customClass="MyButton" customModule="Shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="384" width="375" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="loginButton"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="login:" destination="W2I-ze-ksQ" eventType="touchUpInside" id="5Uk-4k-BAx"/>
@@ -65,6 +68,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-jo-ICn" customClass="MyButton" customModule="Shop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="422" width="375" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="RegisterButton"/>
                                         <state key="normal" title="Register"/>
                                         <connections>
                                             <action selector="register:" destination="W2I-ze-ksQ" eventType="touchUpInside" id="ZwQ-em-iMW"/>
@@ -155,12 +159,14 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9EL-0d-vjr">
                                         <rect key="frame" x="0.0" y="213" width="375" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="login"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZ9-87-DyN" customClass="MyButton" customModule="Shop" customModuleProvider="target">
                                         <rect key="frame" x="147.5" y="407" width="80" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="RegisterButton"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="tuQ-Ub-yYV"/>
                                         </constraints>
@@ -171,6 +177,7 @@
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2iv-5Y-1fh">
                                         <rect key="frame" x="0.0" y="347" width="375" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="password"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -211,9 +218,11 @@
                         <outlet property="login" destination="9EL-0d-vjr" id="VFh-V5-fSO"/>
                         <outlet property="password" destination="2iv-5Y-1fh" id="ZHw-Ow-ymk"/>
                         <outlet property="scrollView" destination="O70-y9-8qh" id="s0V-6b-DeI"/>
+                        <segue destination="bdx-MV-hNG" kind="unwind" identifier="registered" unwindAction="registeredWithSegue:" id="cbX-jP-CAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3M-vi-lC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bdx-MV-hNG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2509.5999999999999" y="133.5832083958021"/>
         </scene>

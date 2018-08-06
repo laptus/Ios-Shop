@@ -9,7 +9,8 @@
 import XCTest
 
 class ShopUITests: XCTestCase {
-        
+    var app: XCUIApplication!
+    
     override func setUp() {
         super.setUp()
         
@@ -18,8 +19,8 @@ class ShopUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
+        app = XCUIApplication()
+        app.launch()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
@@ -28,9 +29,56 @@ class ShopUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAuth() {
+        let scrollViews = app.scrollViews
+        
+        let loginTextField = scrollViews.textFields["login"]
+        loginTextField.tap()
+        loginTextField.typeText("123")
+        
+        let passwordTextField = scrollViews.textFields["password"]
+        passwordTextField.tap()
+        passwordTextField.typeText("123")
+        
+        let loginButton = scrollViews.buttons["loginButton"]
+        loginButton.tap()
     }
     
+    func testLogOut() {
+        let scrollViews = app.scrollViews
+        
+        let loginTextField = scrollViews.textFields["login"]
+        loginTextField.tap()
+        loginTextField.typeText("123")
+        
+        let passwordTextField = scrollViews.textFields["password"]
+        passwordTextField.tap()
+        passwordTextField.typeText("123")
+        
+        let loginButton = scrollViews.buttons["loginButton"]
+        loginButton.tap()
+        
+        app.wait(for: XCUIApplication.State.runningBackground, timeout: 150)
+        let bar = app.tabBars
+        bar.buttons["logout"].tap()
+    }
+    
+    func testRegister() {
+        let scrollViews = app.scrollViews
+        
+        let registerButton = scrollViews.buttons["RegisterButton"]
+        
+        registerButton.tap()
+        
+        let loginTextField = scrollViews.textFields["login"]
+        loginTextField.tap()
+        loginTextField.typeText("123")
+        
+        let passwordTextField = scrollViews.textFields["password"]
+        passwordTextField.tap()
+        passwordTextField.typeText("123")
+        
+        let loginButton = scrollViews.buttons["RegisterButton"]
+        loginButton.tap()
+    }
 }

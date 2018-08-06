@@ -58,7 +58,7 @@ class UserDataVC: UIViewController, SettingsView {
     }
     
     func changeUserData() {
-        if let id = (UserDefaults.standard.value(forKey: "user") as? UserInfo)?.id,
+        if let id = (UserDefaults.standard.value(forKey: "userId") as? UserInfo)?.id,
             let name = nameField.text,
             let pass = password.text,
             let eMail = email.text,
@@ -87,12 +87,13 @@ class UserDataVC: UIViewController, SettingsView {
     }
     
     func setUser() {
-        guard let currentUser = (UserDefaults.standard.value(forKey: "user") as? UserInfo) else { return }
-        nameField.text = currentUser.name
-        password.text = currentUser.password
-        email.text = currentUser.eMail
-        bio.text = currentUser.bio
-        creditCard.text = currentUser.creditcard
-        gender.text = currentUser.gender
+        UserDefaults.standard.value(forKey: "userId")
+        nameField.text = UserDefaults.standard.value(forKey: "userName") as! String
+        password.text = UserDefaults.standard.value(forKey: "userPassword") as! String
+        bio.text = UserDefaults.standard.value(forKey: "userBio") as! String
+        creditCard.text = UserDefaults.value(forKey: "userCard") as! String
+        email.text = UserDefaults.standard.value(forKey: "userMail") as! String
+        gender.text = UserDefaults.standard.value(forKey: "userGender") as! String
+
     }
 }
