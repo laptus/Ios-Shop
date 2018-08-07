@@ -3,6 +3,7 @@ import UIKit
 class TabBarCoordinator: BaseCoordinator {
     private let tabbarView: TabBarView
     private let coordinatorFactory: CoordinatorFactory
+    var onLogOutAuth: (() -> Void)?
     
     init(tabbarView: TabBarView, coordinatorFactory: CoordinatorFactory) {
         self.tabbarView = tabbarView
@@ -14,9 +15,10 @@ class TabBarCoordinator: BaseCoordinator {
         tabbarView.onItemFlowSelect = runItemFlow()
         tabbarView.onSettingsFlowSelect = runSettingsFlow()
          tabbarView.onBasketFlowSelect = runBasketFlow()
+        tabbarView.onExit = onLogOutAuth
     }
     
-    private func runCatalogFlow() -> ((UINavigationController) -> ()) {
+    private func runCatalogFlow() -> ((UINavigationController) -> Void) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
                 let catalogCoordinator = self.coordinatorFactory.makeCatalogCoordinator(navController: navController)
@@ -26,7 +28,7 @@ class TabBarCoordinator: BaseCoordinator {
         }
     }
     
-    private func runSettingsFlow() -> ((UINavigationController) -> ()) {
+    private func runSettingsFlow() -> ((UINavigationController) -> Void) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
                 let settingsCoordinator = self.coordinatorFactory.makeSettingsCoordinator(navController: navController)
@@ -36,7 +38,7 @@ class TabBarCoordinator: BaseCoordinator {
         }
     }
     
-    private func runItemFlow() -> ((UINavigationController) -> ()) {
+    private func runItemFlow() -> ((UINavigationController) -> Void) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
                 let catalogCoordinator = self.coordinatorFactory.makeItemCoordinator(navController: navController)
@@ -46,7 +48,7 @@ class TabBarCoordinator: BaseCoordinator {
         }
     }
     
-    private func runBasketFlow() -> ((UINavigationController) -> ()) {
+    private func runBasketFlow() -> ((UINavigationController) -> Void) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
                 let basketCoordinator = self.coordinatorFactory.makeBasketCoordinator(navController: navController)

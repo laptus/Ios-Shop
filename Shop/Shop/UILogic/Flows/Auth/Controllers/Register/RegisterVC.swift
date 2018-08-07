@@ -4,9 +4,11 @@ class RegisterVC: UIViewController, RegisterView {
     
     var viewModel: RegisterViewModel?
     var userInfo: UserInfo? { return viewModel?.userInfo }
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var login: UITextField!
     @IBOutlet weak var password: UITextField!
+    
     @IBAction func register(_ sender: Any) {
         register()
     }
@@ -21,6 +23,7 @@ class RegisterVC: UIViewController, RegisterView {
                                                selector: #selector(keyboardWillBeHidden),
                                                name: NSNotification.Name.UIKeyboardWillHide,
                                                object: nil)
+        viewModel = RegisterViewModel()
     }
     
     
@@ -35,9 +38,11 @@ class RegisterVC: UIViewController, RegisterView {
     
     func register() {
         viewModel?.register(login: login.text, password: password.text, completionHandler: {[weak self] recievedError in
-            if let error = recievedError as? ProjectErrors,
+            if let error = recievedError as? Errors,
                 let vc = self {
                 Alert.showRegisterError(for: vc, error: error)
+            } else {
+                self?.performSegue(withIdentifier: "registered", sender: self)
             }
         })
     }

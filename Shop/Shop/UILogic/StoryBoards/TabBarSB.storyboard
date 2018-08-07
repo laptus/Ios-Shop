@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Catalog-->
         <scene sceneID="cpC-0K-i0c">
             <objects>
                 <viewController id="pSs-YS-dkH" customClass="UINavigationController" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vdF-om-qOq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="catalog" id="fPi-5V-eqF"/>
+                    <tabBarItem key="tabBarItem" title="Catalog" image="catalog" id="fPi-5V-eqF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peq-dC-Yix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,13 +39,30 @@
                         <segue destination="pSs-YS-dkH" kind="relationship" relationship="viewControllers" id="3Om-JV-4Ta"/>
                         <segue destination="uUz-7q-vuu" kind="relationship" relationship="viewControllers" id="Ca9-4H-jbT"/>
                         <segue destination="1cx-pR-7qV" kind="relationship" relationship="viewControllers" id="qrn-oX-HaO"/>
+                        <segue destination="rzV-XY-ovB" kind="relationship" relationship="viewControllers" id="uWq-Gs-u94"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmz-LB-UKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-524" y="-246"/>
         </scene>
-        <!--Item-->
+        <!--logout-->
+        <scene sceneID="BEp-JI-i0g">
+            <objects>
+                <viewController id="rzV-XY-ovB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wdm-WB-0F8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RUi-rz-0we"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="logout" largeContentSizeImage="logout" selectedImage="logout" id="jUT-QL-M65"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGm-dS-0Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="865"/>
+        </scene>
+        <!--Basket-->
         <scene sceneID="ZVP-sC-2Og">
             <objects>
                 <viewController id="1cx-pR-7qV" customClass="UINavigationController" sceneMemberID="viewController">
@@ -55,13 +72,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xcu-IK-SQd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="basket" id="ujG-v2-FQe"/>
+                    <tabBarItem key="tabBarItem" title="Basket" image="basket" id="ujG-v2-FQe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFx-f8-p2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="572"/>
+            <point key="canvasLocation" x="654" y="878"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings-->
         <scene sceneID="T2S-T9-Wu2">
             <objects>
                 <viewController id="uUz-7q-vuu" customClass="UINavigationController" sceneMemberID="viewController">
@@ -71,7 +88,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xSM-FC-Vas"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="user" id="d5P-cd-1zZ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="user" id="d5P-cd-1zZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szF-Q3-yS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +98,7 @@
     <resources>
         <image name="basket" width="25" height="25"/>
         <image name="catalog" width="25" height="25"/>
+        <image name="logout" width="25" height="25"/>
         <image name="user" width="25" height="25"/>
     </resources>
 </document>

@@ -1,11 +1,11 @@
 import UIKit
 
 class TabbarVC: UITabBarController, UITabBarControllerDelegate, TabBarView {
-    
-    var onBasketFlowSelect: ((UINavigationController) -> ())?
-    var onItemFlowSelect: ((UINavigationController) -> ())?
-    var onSettingsFlowSelect: ((UINavigationController) -> ())?
-    var onViewDidLoad: ((UINavigationController) -> ())?
+    var onExit: (() -> Void)?
+    var onBasketFlowSelect: ((UINavigationController) -> Void)?
+    var onItemFlowSelect: ((UINavigationController) -> Void)?
+    var onSettingsFlowSelect: ((UINavigationController) -> Void)?
+    var onViewDidLoad: ((UINavigationController) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,8 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate, TabBarView {
             onSettingsFlowSelect?(controller)
         } else if selectedIndex == 2 {
             onBasketFlowSelect?(controller)
+        } else if selectedIndex == 3 {
+            onExit?()
         }
     }
 }

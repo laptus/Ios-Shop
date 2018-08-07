@@ -124,6 +124,7 @@
 		DBCBEDC020EEA52900C7AC1D /* ResponseDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBEDBF20EEA52900C7AC1D /* ResponseDecodable.swift */; };
 		DBF55E5320F681BC0049DDFC /* GBShopSessionNamager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF55E5220F681BC0049DDFC /* GBShopSessionNamager.swift */; };
 		DBF55E5520F7CF220049DDFC /* GetGoodResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF55E5420F7CF220049DDFC /* GetGoodResult.swift */; };
+		DBFCD6D32115977F0066775A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFCD6D22115977F0066775A /* Analytics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,6 +274,7 @@
 		DBCBEDBF20EEA52900C7AC1D /* ResponseDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecodable.swift; sourceTree = "<group>"; };
 		DBF55E5220F681BC0049DDFC /* GBShopSessionNamager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopSessionNamager.swift; sourceTree = "<group>"; };
 		DBF55E5420F7CF220049DDFC /* GetGoodResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoodResult.swift; sourceTree = "<group>"; };
+		DBFCD6D22115977F0066775A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,10 +428,10 @@
 		DB156350210E1C6F00427D7F /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				DB156337210E138F00427D7F /* CoordinatorFactory.swift */,
 				DB156351210E1C8400427D7F /* AuthModuleFactory.swift */,
 				DB156353210E1C9500427D7F /* SettingsModuleFactory.swift */,
 				DB156355210E1CAA00427D7F /* CatalogModuleFactory.swift */,
-				DB156337210E138F00427D7F /* CoordinatorFactory.swift */,
 				DB6EA462211490AF00E269FD /* BasketModuleFactory.swift */,
 			);
 			path = Factories;
@@ -906,6 +908,7 @@
 		DBB5EAAD20EABFDC004A8D6B /* AppLogic */ = {
 			isa = PBXGroup;
 			children = (
+				DBFCD6D1211597510066775A /* Analytics */,
 				DB4BFAC620F2327900298E68 /* AppDelegate */,
 				DB4BFAA820F13F7700298E68 /* Network */,
 			);
@@ -922,6 +925,14 @@
 				DB547ABD20F1320C00112CBE /* GenericRequest.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DBFCD6D1211597510066775A /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				DBFCD6D22115977F0066775A /* Analytics.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		DD9AEC3E88466B6CAB823EBD /* Frameworks */ = {
@@ -946,6 +957,7 @@
 				DBB5EA7520EABEBC004A8D6B /* Resources */,
 				DBB5EAAE20EAC296004A8D6B /* ShellScript */,
 				E55975252B0666677B5ED81C /* [CP] Embed Pods Frameworks */,
+				DBAE1D932115948100C94D9C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1119,6 +1131,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DBAE1D932115948100C94D9C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" a34de20285e6ac97c71a0811a034f3621d422286 5e78f513f213e98fa2642c3daa60c612ac90842cf678b8702d00b3af18174f57";
+		};
 		DBB5EAAE20EAC296004A8D6B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1192,6 +1217,7 @@
 				DB15637B2110096800427D7F /* DetaiItemView.swift in Sources */,
 				DB4BFAAA20F13F9700298E68 /* AuthRequestsFactory.swift in Sources */,
 				DBCBEDBE20EEA32100C7AC1D /* ErrorParser.swift in Sources */,
+				DBFCD6D32115977F0066775A /* Analytics.swift in Sources */,
 				DB3E3E7F20FCF3EA0063697F /* BasketService.swift in Sources */,
 				DB5EB4AF20F3DA8D0044543B /* AuthRouters.swift in Sources */,
 				DB156347210E1A6600427D7F /* Router.swift in Sources */,
@@ -1422,6 +1448,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_SWIFT_FLAGS[arch=*]" = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = My.Shop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1441,6 +1468,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DRELEASE";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = My.Shop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

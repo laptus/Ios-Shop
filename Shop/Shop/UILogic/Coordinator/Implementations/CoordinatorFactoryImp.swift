@@ -1,6 +1,7 @@
 import UIKit
 
 class CoordinatorFactoryImp: CoordinatorFactory {
+
     
     func makeItemCoordinator(navController: UINavigationController) -> Coordinator {
         let coordinator = CatalogCoordinator(catalogFactory: ModuleFactoryImp(),
@@ -15,7 +16,7 @@ class CoordinatorFactoryImp: CoordinatorFactory {
         return controller
     }
     
-    func makeTabbarCoordinator() -> (configurator: Coordinator, toPresent: Presentable?) {
+    func makeTabbarCoordinator() -> (configurator: TabBarCoordinator, toPresent: Presentable?) {
         let controller = TabbarVC.controllerFromStoryboard(.tabBar)
         let coordinator = TabBarCoordinator(tabbarView: controller,
                                             coordinatorFactory: CoordinatorFactoryImp())
@@ -49,8 +50,7 @@ class CoordinatorFactoryImp: CoordinatorFactory {
     private func navigationController(_ navController: UINavigationController?) -> UINavigationController {
         if let navController = navController {
             return navController
-        }
-        else {
+        } else {
         return UINavigationController.controllerFromStoryboard(.main)
         }
     }

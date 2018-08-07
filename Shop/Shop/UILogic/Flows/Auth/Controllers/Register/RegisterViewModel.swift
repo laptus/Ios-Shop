@@ -14,17 +14,16 @@ class RegisterViewModel {
             let password = password {
             userInfo.name = login
             userInfo.password = password
-            registerService.register(user: userInfo, completionHandler: { dataResult in
+            registerService.register(user: userInfo, completionHandler: {[weak self] dataResult in
                 switch dataResult.result {
                 case .success:
                     completionHandler(nil)
-                case .failure( _):
-                    completionHandler(ProjectErrors(type: .wrongRequest))
+                case .failure:
+                    completionHandler(Errors(type: .wrongRequest))
                 }
             })
         } else {
-            completionHandler(ProjectErrors(type: .wrongData))
+            completionHandler(Errors(type: .wrongData))
         }
     }
 }
-

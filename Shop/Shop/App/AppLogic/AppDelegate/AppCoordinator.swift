@@ -1,26 +1,10 @@
 import Foundation
 
-fileprivate var isAuthorized: Bool = true
-
-fileprivate enum LaunchInstructor {
-    case main, auth
-    
-    static func configure(isAuthorized: Bool = isAuthorized) -> LaunchInstructor {
-        if isAuthorized {
-            return .main
-        } else {
-            return .auth
-        }
-    }
-}
+private var isAuthorized: Bool = false
 
 final class AppCoordinator: BaseCoordinator {
     private let coordinatorFactory: CoordinatorFactory
     private let router: Router
-    
-    private var instructor: LaunchInstructor {
-        return LaunchInstructor.configure()
-    }
     
     init(router: Router, coordinatorFactory: CoordinatorFactory) {
         self.router = router
@@ -37,6 +21,13 @@ final class AppCoordinator: BaseCoordinator {
     
     private func runMainFlow() {
         let (coordinator, module) = coordinatorFactory.makeTabbarCoordinator()
+        coordinator.onLogOutAuth = {[weak self] in
+            isAuthorized = false
+            self?.router.dismissModule()
+            self?.removeDependency(coordinator)
+            self?.start()
+            
+        }
         addDependency(coordinator)
         router.setRootModule(module)
         coordinator.start()
@@ -46,9 +37,12 @@ final class AppCoordinator: BaseCoordinator {
         let coordinator = coordinatorFactory.makeAuthCoordinatorBox(router: router)
         coordinator.finishFlow = {[weak self] in
             isAuthorized = true
-            self?.start()
+            self?.router.dismissModule()
             self?.removeDependency(coordinator)
+            self?.start()
+            
         }
+        
         addDependency(coordinator)
         coordinator.start()
     }

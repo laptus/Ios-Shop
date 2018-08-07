@@ -11,7 +11,6 @@ class AuthVC: UIViewController, AuthView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = AuthViewModel()
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyBoardWasShown),
                                                name: NSNotification.Name.UIKeyboardWillShow,
@@ -32,17 +31,10 @@ class AuthVC: UIViewController, AuthView {
                                                   object: nil)
     }
     
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
+    
     @IBAction func registered(segue: UIStoryboardSegue) {
-        guard let userInfo = (segue.source as? RegisterVC)?.userInfo else {
-            return
-        }
-        viewModel?.register(userInfo: userInfo, completionHandler: {[weak self] recievedError in
-            if let error = recievedError {
-               self?.showAlert(error: error, title: "Ooops")
-            } else {
-                self?.tryToLogin()
-            }
-        })
+
     }
 }
 
@@ -52,36 +44,38 @@ extension AuthVC {
     }
     
     @IBAction func login(_ sender: Any) {
-        tryToLogin()
+        if let log = login.text,
+            let pass = password.text {
+            tryToLogin(name: log, password: pass)
+        }
     }
     
-    private func tryToLogin() {
-        viewModel?.login(userName: "", password: "", completionHandler: {[weak self] recievedError in
-            if let error = recievedError as? ProjectErrors {
-                guard let vc = self else {return}
-                Alert.showLoginError(for: vc, error: error, actionHandler: {_ in
-                    vc.performSegue(withIdentifier: "toRegister", sender: self)
+    private func tryToLogin(name: String, password: String) {
+        
+            viewModel?.login(userName: name, password: password, completionHandler: {[weak self] recievedError in
+                if let error = recievedError as? Errors {
+                    guard let vc = self else { return }
+                    Alert.showLoginError(for: vc, error: error, actionHandler: {_ in
+                        vc.performSegue(withIdentifier: "toRegister", sender: self)
                     })
-            } else {
-                self?.onCompleteAuth?()
-            }
-        })
+                } else {
+                    self?.onCompleteAuth?()
+                }
+            })
+        
     }
 }
 
 extension AuthVC {
     @objc private func keyBoardWasShown(notification: Notification) {
-        
-        let info = notification.userInfo! as NSDictionary
-        let kbSize = (info.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
-        let contentInsets = UIEdgeInsetsMake(0.0,
-                                             0.0,
-                                             kbSize.height,
-                                             0.0)
-        
-        
-        self.scrollView?.contentInset = contentInsets
-        scrollView?.scrollIndicatorInsets = contentInsets
+        guard
+            let info = notification.userInfo as? NSDictionary,
+            let kbSize = (info.value(forKey: UIKeyboardFrameEndUserInfoKey) as? NSValue)?
+                .cgRectValue.size else { return }
+            
+            let contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0)
+            self.scrollView?.contentInset = contentInsets
+            scrollView?.scrollIndicatorInsets = contentInsets
     }
     
     @objc private func keyboardWillBeHidden(notification: Notification) {

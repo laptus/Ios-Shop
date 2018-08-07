@@ -97,17 +97,10 @@
                                         <rect key="frame" x="0.0" y="597" width="375" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebP-XQ-PoZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                                 <state key="normal" title="Change"/>
                                                 <connections>
                                                     <action selector="changeUserData:" destination="a7B-kT-e0r" eventType="touchUpInside" id="7QC-pl-4u5"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rup-uq-gKK">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
-                                                <state key="normal" title="Log Out"/>
-                                                <connections>
-                                                    <action selector="logOut:" destination="a7B-kT-e0r" eventType="touchUpInside" id="IU4-lC-riA"/>
                                                 </connections>
                                             </button>
                                         </subviews>
