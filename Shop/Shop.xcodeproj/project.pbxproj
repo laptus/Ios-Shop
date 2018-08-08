@@ -85,6 +85,7 @@
 		DB5EB4C320F45DA60044543B /* UserDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4C220F45DA60044543B /* UserDataTest.swift */; };
 		DB5EB4C520F463950044543B /* CatalogTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5EB4C420F463950044543B /* CatalogTest.swift */; };
 		DB5EB4C720F4648E0044543B /* SimpleResult.json in Resources */ = {isa = PBXBuildFile; fileRef = DB5EB4C620F4648E0044543B /* SimpleResult.json */; };
+		DB69DE59211B701E005C58F1 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB69DE58211B701E005C58F1 /* SnapshotHelper.swift */; };
 		DB6EA44C211450EB00E269FD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EA44B211450EB00E269FD /* DetailViewModel.swift */; };
 		DB6EA45121146CE400E269FD /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EA45021146CE400E269FD /* MyButton.swift */; };
 		DB6EA454211482CE00E269FD /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EA453211482CE00E269FD /* BasketView.swift */; };
@@ -230,6 +231,7 @@
 		DB5EB4C220F45DA60044543B /* UserDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataTest.swift; sourceTree = "<group>"; };
 		DB5EB4C420F463950044543B /* CatalogTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTest.swift; sourceTree = "<group>"; };
 		DB5EB4C620F4648E0044543B /* SimpleResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SimpleResult.json; sourceTree = "<group>"; };
+		DB69DE58211B701E005C58F1 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		DB6EA44B211450EB00E269FD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		DB6EA45021146CE400E269FD /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		DB6EA453211482CE00E269FD /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
@@ -849,6 +851,7 @@
 		DBB5EA9920EABEBE004A8D6B /* ShopUITests */ = {
 			isa = PBXGroup;
 			children = (
+				DB69DE58211B701E005C58F1 /* SnapshotHelper.swift */,
 				DBB5EA9A20EABEBE004A8D6B /* ShopUITests.swift */,
 				DBB5EA9C20EABEBE004A8D6B /* Info.plist */,
 			);
@@ -1292,6 +1295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB5EA9B20EABEBE004A8D6B /* ShopUITests.swift in Sources */,
+				DB69DE59211B701E005C58F1 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1442,6 +1446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V8ZBRT5M4;
 				INFOPLIST_FILE = Shop/Enviroment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1462,6 +1467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V8ZBRT5M4;
 				INFOPLIST_FILE = Shop/Enviroment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

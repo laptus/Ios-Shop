@@ -1,0 +1,68 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :custom_lane do
+    # checkout release branch
+    # ensure_git_status_clean
+    #
+    # # clear data
+    # clear_derived_data
+    # xcclean(
+    #     scheme: "Shop",
+    #     workspace: "Shop.xcworkspace"
+    # )
+    #
+    # # update a dependencies
+    # cocoapods(
+    #     use_bundle_exec: false
+    # )
+    #
+    # # run tests
+    # run_tests
+    #
+    # # make screenshots
+    # capture_ios_screenshots
+    #
+    # lane :project do
+    # increment_build_number
+    #
+    # gym(
+    #   scheme: "Shop",
+    #   configuration: "Debug",
+    #   export_method: "development",
+    #   include_symbols: true,
+    #   include_bitcode: true,
+    #   silent: false
+    # )
+
+    # commit changes to git if you have git
+    # but its not git here
+
+    versionNumber = get_version_number
+    buildNumber = get_build_number
+    tag = "#{versionNumber}.#{buildNumber}"
+
+    git_add(path: ["./Podfile.lock", "./Shop.xcodeproj/project.pbxproj", "./ShopTests/Info.plist", "./Shop/Environment/Info.plist", "./ShopUITests/Info.plist"])
+    git_commit(path: ["./Podfile.lock", "./Shop.xcodeproj/project.pbxproj", "./ShopTests/Info.plist", "./Shop/Environment/Info.plist", "./ShopUITests/Info.plist"], message: "version up")
+    add_git_tag(
+      tag: tag
+    )
+
+  end
+end

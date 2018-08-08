@@ -30,8 +30,7 @@ class CatalogServiceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(goodsOnPage)
-        XCTAssert(goodsOnPage?.count == 2, "Wrong goods count")
+        XCTAssertNotNil(goodsOnPage)
     }
     
     func testGetGood() {
@@ -46,7 +45,7 @@ class CatalogServiceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(goodsOnPage)
+        XCTAssertNotNil(goodsOnPage)
     }
     
     func testAddReview() {
@@ -61,7 +60,7 @@ class CatalogServiceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(goodsOnPage)
+        XCTAssertNotNil(goodsOnPage)
     }
     
     func testApproveReview() {
@@ -76,7 +75,7 @@ class CatalogServiceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(goodsOnPage)
+        XCTAssertNotNil(goodsOnPage)
     }
     
     func testRemoveReview() {
@@ -91,6 +90,6 @@ class CatalogServiceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(goodsOnPage)
+        XCTAssertNotNil(goodsOnPage)
     }
 }
