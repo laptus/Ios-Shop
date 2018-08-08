@@ -47,6 +47,5 @@ class ResponseCodableTest: XCTestCase {
                 exp.fulfill()
             }
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(post)
     }
 }

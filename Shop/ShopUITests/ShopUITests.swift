@@ -20,6 +20,7 @@ class ShopUITests: XCTestCase {
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         app = XCUIApplication()
+        setupSnapshot(app)
         app.launch()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -30,6 +31,7 @@ class ShopUITests: XCTestCase {
     }
     
     func testAuth() {
+        snapshot("Login")
         let scrollViews = app.scrollViews
         
         let loginTextField = scrollViews.textFields["login"]
@@ -58,7 +60,7 @@ class ShopUITests: XCTestCase {
         let loginButton = scrollViews.buttons["loginButton"]
         loginButton.tap()
         
-        app.wait(for: XCUIApplication.State.runningBackground, timeout: 150)
+        _ = app.wait(for: XCUIApplication.State.runningBackground, timeout: 150)
         let bar = app.tabBars
         bar.buttons["logout"].tap()
     }
@@ -77,6 +79,8 @@ class ShopUITests: XCTestCase {
         let passwordTextField = scrollViews.textFields["password"]
         passwordTextField.tap()
         passwordTextField.typeText("123")
+        
+        snapshot("Register")
         
         let loginButton = scrollViews.buttons["RegisterButton"]
         loginButton.tap()

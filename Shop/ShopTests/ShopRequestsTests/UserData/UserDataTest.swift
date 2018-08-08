@@ -38,6 +38,6 @@ class UserDataServiceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(user)
+        XCTAssertNotNil(user)
     }
 }

@@ -27,8 +27,8 @@ class AuthSerivceTest: BaseServiceTest {
             user = response.value
              exp.fulfill()
         })
-        wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(user)
+        wait(for: [exp], timeout: 2.0)
+        XCTAssertNotNil(user)
     }
     
     func testAuthLogOut() {
@@ -43,7 +43,7 @@ class AuthSerivceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(user)
+        XCTAssertNotNil(user)
     }
     
     func testAuthRegister() {
@@ -66,6 +66,6 @@ class AuthSerivceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(user)
+        XCTAssertNotNil(user)
     }
 }

@@ -29,7 +29,7 @@ class BaksetServiceTest: BaseServiceTest {
                 exp.fulfill()
             })
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(result)
+        XCTAssertNotNil(result)
     }
     
     func testDelete() {
@@ -44,7 +44,7 @@ class BaksetServiceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(result)
+        XCTAssertNotNil(result)
     }
     
     func testGetContents() {
@@ -59,6 +59,6 @@ class BaksetServiceTest: BaseServiceTest {
         })
         
         wait(for: [exp], timeout: 1.0)
-        XCTAssertNil(result)
+        XCTAssertNotNil(result)
     }
 }
